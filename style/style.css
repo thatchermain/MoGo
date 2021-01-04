@@ -15,6 +15,36 @@ body {
   width: 100vw;
 }
 
+@font-face {
+  font-family: "kaushan";
+  src: url("../../assets/fonts/KaushanScript-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../assets/fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat bold";
+  src: url("../../assets/fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../../assets/fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "roboto italic light";
+  src: url("../../assets/fonts/Roboto-LightItalic.ttf");
+  font-weight: lighter;
+}
+
 .container {
   min-width: 1200px;
 }
@@ -35,7 +65,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Montserrat';
   color: #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/header.jpg");
   background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/header.jpg");
@@ -69,14 +98,14 @@ body {
   top: 6.5rem;
   line-height: 14rem;
   font-size: 15rem;
-  font-weight: 700;
+  font-family: 'montserrat bold';
   text-transform: uppercase;
   text-align: center;
 }
 
 .header__creative {
   position: relative;
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'kaushan', cursive;
   line-height: 12rem;
   top: 4rem;
   font-size: 7.2rem;
@@ -100,7 +129,7 @@ body {
   height: 4rem;
   color: #fff;
   font-size: 1.4rem;
-  font-family: 'Montserrat';
+  font-family: 'montserrat bold';
   font-weight: bold;
   text-transform: uppercase;
   background: none;
@@ -118,13 +147,13 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-top: 20px;
-  font-family: 'Montserrat';
+  font-family: 'montserrat';
   padding-bottom: 2px;
 }
 
 .nav__logo {
   font-size: 3rem;
-  font-weight: bold;
+  font-family: 'montserrat bold';
 }
 
 .nav__list {
@@ -188,7 +217,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Montserrat';
+  font-family: 'montserrat';
 }
 
 .progress__bar {
@@ -200,7 +229,7 @@ body {
 
 .progress__number {
   font-size: 1.7rem;
-  font-weight: bold;
+  font-family: 'montserrat bold';
   padding-right: 1rem;
 }
 

@@ -11,18 +11,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat';
     color: #fff;
     background-image: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
+    
     // Header center part   
     &__main {
         height: 100%;
         position: relative;
     }
-
+    
     &__middle {
         position: relative;
         top: 5.2rem;
@@ -31,20 +30,20 @@
         align-items: center;
         margin-top: 5rem;
     }
-
+    
     &__welcome {
         position: relative;
         top: 6.5rem;
         line-height: 14rem;
         font-size: 15rem;
-        font-weight: 700;
+        font-family: 'montserrat bold';
         text-transform: uppercase;
         text-align: center;
     }
 
     &__creative {
         position: relative;
-        font-family: 'Kaushan Script', cursive;
+        font-family: 'kaushan', cursive;
         line-height: 12rem;
         top: 4rem;
         font-size: 7.2rem;
@@ -68,7 +67,7 @@
         height: 4rem;
         color: #fff;
         font-size: 1.4rem;
-        font-family: 'Montserrat';
+        font-family: 'montserrat bold';
         font-weight: bold;
         text-transform: uppercase;
         background: none;
@@ -82,12 +81,12 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 20px;
-    font-family: 'Montserrat';
+    font-family: 'montserrat';
     padding-bottom: 2px;
 
     &__logo {
         font-size: 3rem;
-        font-weight: bold;
+        font-family: 'montserrat bold';
 
     }
 
@@ -140,7 +139,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Montserrat';
+    font-family: 'montserrat';
 
     &__bar {
         background-color: #fff;
@@ -151,7 +150,7 @@
 
     &__number {
         font-size: 1.7rem;
-        font-weight: bold;
+        font-family: 'montserrat bold';
         padding-right: 1rem;
     }
 
