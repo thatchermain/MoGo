@@ -1,48 +1,29 @@
-$basicRed:rgb(243,129,129);
-$basicYellow:rgb(252,227,138);
-$basicGreen:rgb(234,255,208);
-$basicBlue:rgb(149,225,211);
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root{
-    font-size: 62.5%;
-}
-body {
-    background-color: #fff; 
-    font-family: sans-serif;
-    height: 100vh;
-    width: 100vw;
-    
-}
 //HEADER
-                                        //Header banner
-.header{
+.container {
+    min-width: 1200px;
+}
+
+//Header banner
+.header {
     width: 100%;
-    height: 100%;
-    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Montserrat';
-    position: relative;
-    top: 0;
+    color: #fff;
     background-image: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../img/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;  
-    justify-content: center; 
-    align-items: center;
-                                        //Header center part   
-    &__main{
-        // width: 96rem;
-        width: 62.5%;
+
+    // Header center part   
+    &__main {
         height: 100%;
         position: relative;
     }
-    &__middle{
+
+    &__middle {
         position: relative;
         top: 5.2rem;
         display: flex;
@@ -50,72 +31,85 @@ body {
         align-items: center;
         margin-top: 5rem;
     }
-    &__welcome{
+
+    &__welcome {
         position: relative;
-        top: 5rem;
+        top: 6.5rem;
         line-height: 14rem;
         font-size: 15rem;
         font-weight: 700;
         text-transform: uppercase;
-        text-align: center; 
+        text-align: center;
     }
-    &__creative{
+
+    &__creative {
         position: relative;
         font-family: 'Kaushan Script', cursive;
         line-height: 12rem;
         top: 4rem;
-        font-size: 5.8rem;
+        font-size: 7.2rem;
         font-weight: normal;
         text-align: center;
     }
-    &__line{
+
+    &__line {
         display: block;
         position: relative;
-        top: 13rem;
+        top: 12rem;
         background-color: #fff;
         height: .3rem;
         width: 6rem;
     }
-    &__button{
+
+    &__button {
         position: relative;
-        top: 18rem;
-        width: 15.4rem;
-        height: 3.4rem;
+        top: 17rem;
+        width: 16rem;
+        height: 4rem;
         color: #fff;
         font-size: 1.4rem;
+        font-family: 'Montserrat';
         font-weight: bold;
         text-transform: uppercase;
         background: none;
         border: 3px solid #fff;
     }
 }
+
 //NAV
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 2.4rem;
-    font-weight: bold;
-    &__logo{
+    align-items: flex-end;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    padding-bottom: 2px;
+
+    &__logo {
         font-size: 3rem;
+        font-weight: bold;
+
     }
-    &__list{
+
+    &__list {
         position: relative;
         list-style: none;
         width: 62rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        font-size: 1.4rem;
-        padding: 2rem;
+        font-size: 1.7rem;
+        line-height: 2.5rem;
     }
-    &__item--link{
+
+    &__item--link {
         display: block;
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         transition: color .3s;
-        padding: 0 1.2rem ;
-        &::after{
+
+        &::after {
             content: '';
             display: block;
             height: .2rem;
@@ -126,36 +120,42 @@ body {
             opacity: 0;
             transition: opacity .3s;
         }
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             color: $basicYellow;
-            &::after{
+
+            &::after {
                 opacity: 1;
             }
         }
     }
 }
+
 //PROGRESS
-.progress{
+.progress {
     width: 100%;
     position: absolute;
-    bottom: 3rem;
+    bottom: 1rem;
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     align-items: center;
     font-family: 'Montserrat';
-    &__bar{
+
+    &__bar {
         background-color: #fff;
         width: 22rem;
         height: .3rem;
         margin: 1.5rem auto;
     }
-    &__number{
+
+    &__number {
         font-size: 1.7rem;
         font-weight: bold;
         padding-right: 1rem;
     }
-    &__text{
+
+    &__text {
         text-transform: uppercase;
         font-size: 1.3rem;
     }
