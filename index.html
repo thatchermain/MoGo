@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoGo</title>
-    
+
     <script src="https://kit.fontawesome.com/f9dbf8e5fc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -13,9 +13,11 @@
 <body>
 
     <header class="header">
-        <div class="header__main container">
+        <div class="header__content container">
             <nav class="nav">
                 <div class="nav__logo">MoGo</div>
+                <input type="checkbox" id="toggle" class="nav__toggle">
+                <label for="toggle" class="nav__hamburger">&#9776</label>
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__item--link" href="">About</a></li>
                     <li class="nav__item"><a class="nav__item--link" href="">Service</a></li>
@@ -25,38 +27,40 @@
                     <li class="nav__item"><a href=""><img src="./assets/images/SHOPPING CART.png" alt=""></a></li>
                     <li class="nav__item"><a href=""><img src="./assets/images/MAGNIFYING GLASS.png" alt=""></a></li>
                 </ul>
+                
             </nav>
-            <div class="header__middle">
+
+            <div class="header__center">
                 <h3 class="header__creative">Creative Template</h3>
                 <h1 class="header__welcome">Welcome</h1>
                 <h1 class="header__welcome">to mogo</h1>
                 <span class="header__line"></span>
                 <button class="header__button">Learn more</button>
             </div>
-    
+
             <div class="progress">
-                <div class="progress__one">
+                <div class="progress__block--one">
                     <div class="progress__bar"></div>
                     <div class="progress__info">
                         <span class="progress__number">01</span>
                         <span class="progress__text">Intro</span>
                     </div>
                 </div>
-                <div class="progress__two">
+                <div class="progress__block--two">
                     <div class="progress__bar"></div>
                     <div class="progress__info">
                         <span class="progress__number">02</span>
                         <span class="progress__text">Work</span>
                     </div>
                 </div>
-                <div class="progress__three">
+                <div class="progress__block--three">
                     <div class="progress__bar"></div>
                     <div class="progress__info">
                         <span class="progress__number">03</span>
                         <span class="progress__text">About</span>
                     </div>
                 </div>
-                <div class="progress__four">
+                <div class="progress__block--four">
                     <div class="progress__bar"></div>
                     <div class="progress__info">
                         <span class="progress__number">04</span>
@@ -65,7 +69,7 @@
                 </div>
             </div>
         </div>
-        
+
     </header>
 </body>
 

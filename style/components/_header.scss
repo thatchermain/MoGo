@@ -1,161 +1,234 @@
-//HEADER
+@import '../global/media-queries';
+
 .container {
-    min-width: 1200px;
+    height: 100%;
+    width: 1200px;
+    @include desktop {
+        width: 80%;
+    }
+    @include tablet{
+        width: 100%;
+    }
 }
 
-//Header banner
 .header {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
     background-image: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/header.jpg');
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    
-    // Header center part   
-    &__main {
-        height: 100%;
-        position: relative;
-    }
-    
-    &__middle {
-        position: relative;
-        top: 5.2rem;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+
+    &__center {
+        height: 85vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 5rem;
-    }
-    
-    &__welcome {
-        position: relative;
-        top: 6.5rem;
-        line-height: 14rem;
-        font-size: 15rem;
-        font-family: 'montserrat bold';
-        text-transform: uppercase;
-        text-align: center;
+
     }
 
     &__creative {
+        font-family: 'kaushan';
+        font-size: 72px;
         position: relative;
-        font-family: 'kaushan', cursive;
-        line-height: 12rem;
-        top: 4rem;
-        font-size: 7.2rem;
-        font-weight: normal;
-        text-align: center;
+        top: 140px;
+        @include desktop{
+            font-size: 58px;
+        }
+        @include tablet-m{
+            font-size: 44px;
+        }
+        @include tablet{
+            font-size: 44px;
+        }
+        @include mobile-xl{
+            font-size: 26px;
+        }
+        }
+    
+
+    &__welcome {
+        font-family: 'montserrat bold';
+        font-size: 150px;
+        line-height: 140px;
+        text-transform: uppercase;
+        position: relative;
+        top: 165px;
+        @include desktop {
+            font-size: 120px;
+        }
+        @include tablet-m{
+            font-size: 90px;
+            line-height: 100px;
+            top: 205px;
+        }
+        @include mobile-xl{
+            font-size: 36px;
+        }
+
     }
 
     &__line {
         display: block;
-        position: relative;
-        top: 12rem;
         background-color: #fff;
-        height: .3rem;
-        width: 6rem;
+        height: 3px;
+        width: 60px;
+        position: relative;
+        top: 220px;
+        @include tablet-l{
+            top: 300px;
+        }
+
     }
 
     &__button {
-        position: relative;
-        top: 17rem;
-        width: 16rem;
-        height: 4rem;
+        width: 160px;
+        height: 40px;
         color: #fff;
-        font-size: 1.4rem;
+        font-size: 14px;
         font-family: 'montserrat bold';
         font-weight: bold;
         text-transform: uppercase;
         background: none;
         border: 3px solid #fff;
+        position: relative;
+        top: 270px;
+        @include tablet-l{
+            top: 360px;
+            width: 120px;
+            height: 30px;
+            font-size: 11px;
+        }
+
     }
+
 }
 
-//NAV
+
 .nav {
+    height: 7.5vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 20px;
-    font-family: 'montserrat';
-    padding-bottom: 2px;
+    align-items: center;
 
     &__logo {
-        font-size: 3rem;
         font-family: 'montserrat bold';
-
+        font-size: 30px;
+        margin-top: 8px;
     }
 
     &__list {
-        position: relative;
+        width: 50%;
         list-style: none;
-        width: 62rem;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        font-size: 1.7rem;
-        line-height: 2.5rem;
+        align-items: center;
+        margin-top: 25px;
+        @include tablet-l {
+            position: absolute;
+            top: -20vh;
+        }
     }
 
     &__item--link {
-        display: block;
-        color: #fff;
+        font-family: 'montserrat';
+        font-size: 14px;
         text-decoration: none;
-        text-transform: uppercase;
-        transition: color .3s;
+        color: #fff;
+        transition: .4s;
 
         &::after {
             content: '';
-            display: block;
-            height: .2rem;
-            width: 100%;
-            position: relative;
-            top: .6rem;
             background-color: $basicYellow;
+            display: block;
+            width: 100%;
+            height: 3px;
+            position: relative;
+            margin: 2px 0;
             opacity: 0;
-            transition: opacity .3s;
+            transition: .4s;
         }
 
         &:hover {
-            cursor: pointer;
             color: $basicYellow;
-
             &::after {
                 opacity: 1;
             }
         }
     }
-}
+    &__hamburger{
+        display: none;
+        font-size: 30px;
+        @include tablet-l{
+            display: block;
+        }
+        &:hover{
+            cursor: pointer;
+            color: $basicYellow;
+        }
+    }
+    &__toggle{
+        display: none;
+        &:checked ~ .nav__list{
+            transition: 1s;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 5vh;
+            background-color: purple;
+            width: 80%;
+            @include tablet{
+                width: 100%;
 
-//PROGRESS
+            }
+            .nav__item{
+                line-height: 30px;
+            }
+        }
+    }
+
+    
+}
 .progress {
-    width: 100%;
-    position: absolute;
-    bottom: 1rem;
+    font-family: 'montserrat';
+    height: 7.5vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-family: 'montserrat';
+    align-items: start;
 
     &__bar {
         background-color: #fff;
-        width: 22rem;
-        height: .3rem;
-        margin: 1.5rem auto;
+        position: relative;
+        height: 3px;
+        width: 280px;
+        margin-top: 0;
+
+        @include desktop {
+            width: 15vw;
+        }
+    }
+
+    &__info {
+        height: 7vh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     &__number {
-        font-size: 1.7rem;
         font-family: 'montserrat bold';
-        padding-right: 1rem;
+        font-size: 18px;
+        padding-right: 10px;
     }
 
     &__text {
-        text-transform: uppercase;
-        font-size: 1.3rem;
+        font-family: 'montserrat';
+        font-size: 13px;
+
     }
 }
