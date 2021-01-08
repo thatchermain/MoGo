@@ -233,15 +233,23 @@
 
     &__hamburger {
         display: none;
-        font-size: 30px;
-
+        // font-size: 30px;
+        &--top, &--middle, &--bottom{
+            display: block;
+            width: 35px;
+            height: 3px;
+            margin: 10px;
+            background-color: #fff;
+            transition: 1s;
+        }
+        @include desktop {
+            padding: 0 5%;
+        }
+        
         @include tablet-l {
             display: block;
         }
 
-        @include desktop {
-            padding: 0 5%;
-        }
 
         &:hover {
             cursor: pointer;
@@ -261,7 +269,8 @@
             padding: 10%;
             transition: 1s;
             transform: translateX(1000px);
-
+            
+            }
             .nav__item {
                 line-height: 30px;
 
@@ -274,6 +283,14 @@
                     }
                 }
             }
+        &:checked + label .nav__hamburger--top{
+            transform: translateY(13px) rotate(45deg) ;
+        }
+        &:checked + label .nav__hamburger--middle{
+            transform: translateY(0px) rotate(-45deg);
+        }
+        &:checked + label .nav__hamburger--bottom{
+            transform: scale(0) rotate(360deg);
         }
     }
 
