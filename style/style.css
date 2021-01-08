@@ -269,7 +269,8 @@ body {
 
 @media (max-width: 1200px) {
   .nav {
-    width: 80%;
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -285,7 +286,7 @@ body {
   margin-top: 8px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
   .nav__logo {
     padding: 0 5%;
   }
@@ -373,7 +374,7 @@ body {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
   .nav__hamburger {
     padding: 0 5%;
   }
@@ -399,6 +400,7 @@ body {
           flex-direction: column;
   background-color: #f38181;
   width: 100%;
+  padding: 10%;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transform: translateX(1000px);
