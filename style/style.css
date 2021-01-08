@@ -319,7 +319,7 @@ body {
             flex-direction: column;
     top: 5vh;
     width: 80%;
-    height: 50vh;
+    height: 92.5vh;
     left: -1000px;
     -webkit-transition: -webkit-transform .4s;
     transition: -webkit-transform .4s;
@@ -395,14 +395,12 @@ body {
   width: 100%;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transform-origin: top;
-          transform-origin: top;
   -webkit-transform: translateX(1000px);
           transform: translateX(1000px);
 }
 
 .nav__toggle:checked ~ .nav__list .nav__item {
-  line-height: 60px;
+  line-height: 30px;
 }
 
 .nav__toggle:checked ~ .nav__list .nav__item--link {

@@ -185,7 +185,7 @@
             flex-direction: column;
             top: 5vh;
             width: 80%;
-            height: 50vh;
+            height: 92.5vh;
             left: -1000px;
             transition: transform .4s;
         }
@@ -246,10 +246,9 @@
             background-color: $basicRed;
             width: 100%;
             transition: 1s;
-            transform-origin: top;
             transform: translateX(1000px);
             .nav__item {
-                line-height: 60px;
+                line-height: 30px;
                  &--link{
                     font-size: 18px;
                     &::after{
