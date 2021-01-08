@@ -348,6 +348,12 @@ body {
   transition: .4s;
 }
 
+@media (max-width: 1024px) {
+  .nav__item--link::after {
+    margin: 15px 0 0;
+  }
+}
+
 .nav__item--link:hover {
   color: #fce38a;
 }
