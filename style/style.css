@@ -43,6 +43,8 @@ body {
   background-color: #fff;
   font-family: sans-serif;
   width: 100vw;
+  height: 300vh;
+  overflow-x: hidden;
 }
 
 .container {
@@ -80,7 +82,7 @@ body {
 }
 
 .header__center {
-  height: 85vh;
+  height: 92.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,6 +252,7 @@ body {
 
 .nav {
   height: 7.5vh;
+  width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,6 +262,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #f38181;
+  position: fixed;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    width: 80%;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    width: 100%;
+  }
 }
 
 .nav__logo {
@@ -290,8 +308,6 @@ body {
 
 @media (max-width: 1024px) {
   .nav__list {
-    z-index: -1;
-    display: none;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -300,7 +316,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 10%;
+    top: 65%;
     -webkit-transform: translateX(-500px);
             transform: translateX(-500px);
     -webkit-transition: -webkit-transform .4s;
@@ -366,29 +382,30 @@ body {
 }
 
 .nav__toggle:checked ~ .nav__list {
-  z-index: 1;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f38181;
-  width: 80%;
+  width: 100%;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
 
-@media (max-width: 720px) {
-  .nav__toggle:checked ~ .nav__list {
-    width: 100%;
-  }
+.nav__toggle:checked ~ .nav__list .nav__item {
+  line-height: 60px;
 }
 
-.nav__toggle:checked ~ .nav__list .nav__item {
-  line-height: 30px;
+.nav__toggle:checked ~ .nav__list .nav__item--link {
+  font-size: 18px;
+}
+
+.nav__toggle:checked ~ .nav__list .nav__item--link::after {
+  top: -20px;
 }
 
 .progress {
