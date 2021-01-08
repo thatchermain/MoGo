@@ -11,3 +11,13 @@ body {
     font-family: sans-serif;
     width: 100vw;
 }
+.container {
+    height: 100%;
+    width: 1200px;
+    @include desktop {
+        width: 80%;
+    }
+    @include tablet{
+        width: 100%;
+    }
+}
