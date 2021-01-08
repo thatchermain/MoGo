@@ -252,7 +252,7 @@ body {
 
 .nav {
   height: 7.5vh;
-  width: 1200px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +264,8 @@ body {
           align-items: center;
   background-color: #f38181;
   position: fixed;
+  left: 0;
+  padding: 0 18%;
   z-index: 1;
 }
 
@@ -271,12 +273,13 @@ body {
   .nav {
     width: 100%;
     left: 0;
+    padding: 0 10%;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
   .nav {
-    width: 100%;
+    padding: 0;
   }
 }
 
