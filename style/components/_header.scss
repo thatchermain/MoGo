@@ -46,8 +46,14 @@
         }
         @include mobile-xl{
             font-size: 26px;
+            font-weight: normal;
         }
+        @include mobile-horizontal{
+            top: 40px;
+            font-size: 16px;
+            font-weight: normal;
         }
+    }
     
 
     &__welcome {
@@ -66,9 +72,15 @@
             top: 205px;
         }
         @include mobile-xl{
+            top: 145px;
             font-size: 36px;
+            line-height: 50px;
         }
-
+        @include mobile-horizontal{
+            top: 40px;
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 
     &__line {
@@ -79,7 +91,17 @@
         position: relative;
         top: 220px;
         @include tablet-l{
-            top: 300px;
+            top: 200px;
+            width: 40px;
+        }
+        @include tablet-m{
+            top: 250px;
+        }
+        @include mobile-xl{
+            top: 200px;
+        }
+        @include mobile-horizontal{
+            top: 50px;
         }
 
     }
@@ -97,12 +119,20 @@
         position: relative;
         top: 270px;
         @include tablet-l{
-            top: 360px;
+            top: 260px;
             width: 120px;
             height: 30px;
             font-size: 11px;
         }
-
+        @include tablet-m{
+            top: 300px;
+        }
+        @include mobile-xl{
+            top: 260px;
+        }
+        @include mobile-horizontal{
+            top: 70px;
+        }
     }
 
 }
@@ -167,7 +197,6 @@
         }
         &:hover{
             cursor: pointer;
-            color: $basicYellow;
         }
     }
     &__toggle{

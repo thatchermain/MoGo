@@ -121,6 +121,15 @@ body {
 @media (max-width: 600px) {
   .header__creative {
     font-size: 26px;
+    font-weight: normal;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .header__creative {
+    top: 40px;
+    font-size: 16px;
+    font-weight: normal;
   }
 }
 
@@ -149,7 +158,17 @@ body {
 
 @media (max-width: 600px) {
   .header__welcome {
+    top: 145px;
     font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .header__welcome {
+    top: 40px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 
@@ -164,7 +183,26 @@ body {
 
 @media (max-width: 1024px) {
   .header__line {
-    top: 300px;
+    top: 200px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 970px) {
+  .header__line {
+    top: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__line {
+    top: 200px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .header__line {
+    top: 50px;
   }
 }
 
@@ -184,10 +222,28 @@ body {
 
 @media (max-width: 1024px) {
   .header__button {
-    top: 360px;
+    top: 260px;
     width: 120px;
     height: 30px;
     font-size: 11px;
+  }
+}
+
+@media (max-width: 970px) {
+  .header__button {
+    top: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__button {
+    top: 260px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .header__button {
+    top: 70px;
   }
 }
 
@@ -275,7 +331,6 @@ body {
 
 .nav__hamburger:hover {
   cursor: pointer;
-  color: #fce38a;
 }
 
 .nav__toggle {
