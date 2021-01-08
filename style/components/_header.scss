@@ -166,16 +166,16 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 25px;
-        transition: 1s;
-
+        
         @include tablet-l {
-            transform-origin: left;
+            z-index: -1;
+            display: none;
             position: absolute;
-            left: -50%;
-            top: 10%;
             display: flex;
             flex-direction: column;
-            transition: 1s;
+            top: 10%;
+            transform: translateX(-500px);
+            transition: transform .4s;
         }
     }
 
@@ -229,11 +229,13 @@
 
         &:checked~.nav__list {
             z-index: 1;
+            display: flex;
             position: absolute;
+            flex-direction: column;
             background-color: $basicRed;
             width: 80%;
-            left: 0;
-            @include tablet-l {
+            transform: translateX(0px);
+            @include tablet {
                 width: 100%;
             }
 
