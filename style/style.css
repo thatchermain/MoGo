@@ -319,7 +319,7 @@ body {
             flex-direction: column;
     top: 5vh;
     width: 80%;
-    height: 92.5vh;
+    height: 80vh;
     left: -1000px;
     -webkit-transition: -webkit-transform .4s;
     transition: -webkit-transform .4s;
