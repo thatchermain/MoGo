@@ -1,0 +1,132 @@
+@mixin bgPositionGrid {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__top--short {
+        position: relative;
+        font-family: 'kaushan';
+        font-size: 24px;
+        top: 9px;
+        color: $textDark;
+    }
+
+    &__middle--short {
+        position: relative;
+        font-family: 'montserrat bold';
+        font-size: 30px;
+        text-transform: uppercase;
+        top: 17px;
+        color: $textDark;
+    }
+
+    &__line--short {
+        position: relative;
+        top: 51px;
+        display: block;
+        background-color: $basicRed;
+        width: 60px;
+        height: 3px;
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__center {
+        height: 540px;
+    }
+
+    &__info {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0 110px;
+    }
+
+    &__text {
+        font-family: 'roboto';
+        font-size: 15px;
+        line-height: 24px;
+        color: $textLight;
+    }
+
+    &__gallery {
+        height: 450px;
+        width: 100%;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+
+    }
+
+    &__image {
+        &--one {
+            background-image: url('../assets/images/about/keyboard.jpg');
+            @include bgPositionGrid();
+        }
+
+        &--two {
+            background-image: url('../assets/images/about/headphones.jpg');
+            @include bgPositionGrid();
+        }
+
+        &--three {
+            background-image: url('../assets/images/about/pot.jpg');
+            @include bgPositionGrid();
+        }
+
+    }
+
+    &__footer {
+        background-color: $basicBlue;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__stats {
+        position: relative;
+        width: 240px;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $basicWhite;
+        border-right: 1px solid rgb(216, 216, 216);
+
+        &--one {
+            border-left: 1px solid rgb(216, 216, 216);
+        }
+    }
+
+    &__number {
+        font-family: 'montserrat bold';
+        font-size: 72px;
+        position: absolute;
+        top: 57px;
+    }
+
+    &__what-of {
+        font-family: 'montserrat';
+        font-size: 14px;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 90px;
+    }
+}

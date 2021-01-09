@@ -39,6 +39,10 @@
   font-size: 62.5%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   font-family: sans-serif;
@@ -62,6 +66,38 @@ body {
   .container {
     width: 100%;
   }
+}
+
+.title {
+  position: relative;
+  height: 230px;
+  width: 100%;
+}
+
+.title__top {
+  position: relative;
+  font-family: 'kaushan';
+  font-size: 24px;
+  top: 27px;
+  color: #333333;
+}
+
+.title__middle {
+  position: relative;
+  font-family: 'montserrat bold';
+  font-size: 30px;
+  text-transform: uppercase;
+  top: 35px;
+  color: #333333;
+}
+
+.title__line {
+  position: relative;
+  top: 70px;
+  display: block;
+  background-color: #f38181;
+  width: 60px;
+  height: 3px;
 }
 
 .header {
@@ -540,4 +576,169 @@ body {
 .progress__text {
   font-family: 'montserrat';
   font-size: 13px;
+}
+
+.title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title__top--short {
+  position: relative;
+  font-family: 'kaushan';
+  font-size: 24px;
+  top: 9px;
+  color: #333333;
+}
+
+.title__middle--short {
+  position: relative;
+  font-family: 'montserrat bold';
+  font-size: 30px;
+  text-transform: uppercase;
+  top: 17px;
+  color: #333333;
+}
+
+.title__line--short {
+  position: relative;
+  top: 51px;
+  display: block;
+  background-color: #f38181;
+  width: 60px;
+  height: 3px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__center {
+  height: 540px;
+}
+
+.about__info {
+  height: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0 110px;
+}
+
+.about__text {
+  font-family: 'roboto';
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.about__gallery {
+  height: 450px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.about__image--one {
+  background-image: url("/assets/images/about/keyboard.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__image--two {
+  background-image: url("/assets/images/about/headphones.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__image--three {
+  background-image: url("/assets/images/about/pot.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__footer {
+  background-color: #95e1d3;
+  width: 100%;
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about__stats {
+  position: relative;
+  width: 240px;
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border-right: 1px solid #d8d8d8;
+}
+
+.about__stats--one {
+  border-left: 1px solid #d8d8d8;
+}
+
+.about__number {
+  font-family: 'montserrat bold';
+  font-size: 72px;
+  position: absolute;
+  top: 57px;
+}
+
+.about__what-of {
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 90px;
 }

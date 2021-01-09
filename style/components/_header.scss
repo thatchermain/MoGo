@@ -166,7 +166,8 @@
     @include tablet-l {
         padding: 0;
     }
-    @include mobile-horizontal{
+
+    @include mobile-horizontal {
         padding: 4%;
     }
 
@@ -199,7 +200,8 @@
             left: -1000px;
             transition: transform .4s;
         }
-        @include mobile-xl{
+
+        @include mobile-xl {
             top: 3vh;
         }
     }
@@ -280,11 +282,13 @@
                 padding: 5%;
                 transition: 1s;
                 transform: translateX(1000px);
-                @include mobile-xl{
+
+                @include mobile-xl {
                     top: 3vh;
-                    
+
                 }
-                @include mobile-horizontal{
+
+                @include mobile-horizontal {
                     padding: 0px;
                 }
 
@@ -293,11 +297,13 @@
             .nav__item {
                 line-height: 20px;
 
-                @include mobile-horizontal{
+                @include mobile-horizontal {
                     line-height: 15px;
                 }
+
                 &--link {
                     font-size: 18px;
+
                     &::after {
                         top: -15px;
                         ;
@@ -357,7 +363,8 @@
         font-family: 'montserrat bold';
         font-size: 18px;
         padding-right: 10px;
-        @include mobile-xl{
+
+        @include mobile-xl {
             display: none;
 
         }
