@@ -51,7 +51,7 @@
     }
   }
   @mixin mobile-horizontal {
-    @media (orientation: landscape) and (max-width: 640px) {
+    @media (orientation: landscape) and (max-width: 824px) {
       @content;
     }
   }

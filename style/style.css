@@ -127,9 +127,9 @@ body {
   }
 }
 
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-width: 824px) {
   .header__creative {
-    top: 40px;
+    top: 30%;
     font-size: 16px;
     font-weight: normal;
   }
@@ -166,9 +166,9 @@ body {
   }
 }
 
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-width: 824px) {
   .header__welcome {
-    top: 40px;
+    top: 35%;
     font-size: 30px;
     line-height: 40px;
   }
@@ -202,9 +202,9 @@ body {
   }
 }
 
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-width: 824px) {
   .header__line {
-    top: 50px;
+    top: 40%;
   }
 }
 
@@ -244,9 +244,9 @@ body {
   }
 }
 
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-width: 824px) {
   .header__button {
-    top: 70px;
+    top: 50%;
   }
 }
 
@@ -283,7 +283,7 @@ body {
   }
 }
 
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-width: 824px) {
   .nav {
     padding: 4%;
   }
@@ -427,7 +427,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) and (max-width: 640px) {
+@media (max-width: 1024px) and (orientation: landscape) and (max-width: 824px) {
   .nav__toggle:checked ~ .nav__list {
     padding: 0px;
   }
@@ -437,7 +437,7 @@ body {
   line-height: 20px;
 }
 
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-width: 824px) {
   .nav__toggle:checked ~ .nav__list .nav__item {
     line-height: 15px;
   }
