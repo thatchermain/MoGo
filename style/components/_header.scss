@@ -165,7 +165,9 @@
 
     @include tablet-l {
         padding: 0;
-
+    }
+    @include mobile-horizontal{
+        padding: 4%;
     }
 
     &__logo {
@@ -272,21 +274,25 @@
                 flex-direction: column;
                 background-color: $basicRed;
                 width: 100%;
-                padding: 10%;
+                padding: 5%;
                 transition: 1s;
                 transform: translateX(1000px);
-
+                @include mobile-horizontal{
+                    padding: 0px;
+                }
 
             }
 
             .nav__item {
-                line-height: 30px;
+                line-height: 20px;
 
+                @include mobile-horizontal{
+                    line-height: 15px;
+                }
                 &--link {
                     font-size: 18px;
-
                     &::after {
-                        top: -20px;
+                        top: -15px;
                         ;
                     }
                 }
@@ -344,6 +350,10 @@
         font-family: 'montserrat bold';
         font-size: 18px;
         padding-right: 10px;
+        @include mobile-xl{
+            display: none;
+
+        }
     }
 
     &__text {
