@@ -665,27 +665,27 @@ body {
   display: grid;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
 .about__image--one {
-  background-image: url("/assets/images/about/keyboard.jpg");
+  background-image: url("../assets/images/about/keyboard.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about__image--two {
-  background-image: url("/assets/images/about/headphones.jpg");
+  background-image: url("../assets/images/about/headphones.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about__image--three {
-  background-image: url("/assets/images/about/pot.jpg");
+  background-image: url("../assets/images/about/pot.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
