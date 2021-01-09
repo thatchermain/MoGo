@@ -193,11 +193,14 @@
             position: fixed;
             display: flex;
             flex-direction: column;
-            top: 5vh;
+            top: 4.9vh;
             width: 80%;
             height: 80vh;
             left: -1000px;
             transition: transform .4s;
+        }
+        @include mobile-xl{
+            top: 3vh;
         }
     }
 
@@ -270,13 +273,17 @@
 
                 position: absolute;
                 display: flex;
-                top: 5vh;
+                top: 4.9vh;
                 flex-direction: column;
                 background-color: $basicRed;
                 width: 100%;
                 padding: 5%;
                 transition: 1s;
                 transform: translateX(1000px);
+                @include mobile-xl{
+                    top: 3vh;
+                    
+                }
                 @include mobile-horizontal{
                     padding: 0px;
                 }
