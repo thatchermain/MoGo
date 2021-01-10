@@ -1,214 +1,49 @@
-//          HEADER
-
-.header {
+.home {
     background-image: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/header.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    // min-height: 100vh;
+    height: 1000px;
     width: 100%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-
-    &__center {
-        height: 70vh;
-        width: 100%;
-        text-align: center;
-    }
-
-    &__creative {
-        font-family: 'kaushan';
-        font-size: 72px;
-        position: relative;
-        margin-top: 15vh;
-        margin-top: 22vh;
-        
-
-        @include desktop {
-            font-size: 58px;
-        }
-
-        @include tablet-m {
-            font-size: 44px;
-        }
-
-        @include tablet {
-            font-size: 44px;
-        }
-
-        @include mobile-xl {
-            font-size: 26px;
-            font-weight: normal;
-        }
-
-        @include mobile-horizontal {
-            top: 30%;
-            font-size: 16px;
-            font-weight: normal;
-        }
-    }
-
-
-    &__welcome {
-        font-family: 'montserrat bold';
-        font-size: 150px;
-        line-height: 85px;
-        text-transform: uppercase;  
-        margin-top: 5.5vh;
-
-
-        @include desktop {
-            font-size: 120px;
-        }
-
-        @include tablet-m {
-            font-size: 90px;
-            line-height: 100px;
-            top: 205px;
-        }
-
-        @include mobile-xl {
-            top: 145px;
-            font-size: 56px;
-            line-height: 60px;
-        }
-
-        @include mobile-horizontal {
-            top: 35%;
-            font-size: 30px;
-            line-height: 40px;
-        }
-    }
-
-    &__line {
-        display: block;
-        background-color: #fff;
-        height: 3px;
-        width: 60px;
-        margin: 8.5vh auto 0;
-
-        @include tablet-l {
-            top: 200px;
-            width: 40px;
-        }
-
-        @include tablet-m {
-            top: 250px;
-        }
-
-        @include mobile-xl {
-            top: 200px;
-        }
-
-        @include mobile-horizontal {
-            top: 40%;
-        }
-
-    }
-
-    &__button {
-        width: 160px;
-        height: 40px;
-        color: #fff;
-        font-size: 14px;
-        font-family: 'montserrat bold';
-        font-weight: bold;
-        text-transform: uppercase;
-        background: none;
-        border: 3px solid #fff;
-        margin: 5vh auto;
-        cursor: pointer;
-
-        @include tablet-l {
-            top: 260px;
-            width: 120px;
-            height: 30px;
-            font-size: 11px;
-        }
-
-        @include tablet-m {
-            top: 300px;
-        }
-
-        @include mobile-xl {
-            top: 260px;
-        }
-
-        @include mobile-horizontal {
-            top: 50%;
-        }
-    }
-
 }
 
-//             NAV
 .nav {
-    height: 7.5vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $basicRed;
-    position: fixed;
-    left: 0;
-    padding: 0 18%;
-    z-index: 1;
-
-    @include desktop {
-        width: 100%;
-        left: 0;
-        padding: 0 10%;
-    }
-
-    @include tablet-l {
-        padding: 0;
-    }
-
-    @include mobile-horizontal {
-        padding: 4%;
-    }
+    padding: 25px;
 
     &__logo {
         font-family: 'montserrat bold';
         font-size: 30px;
-        margin-top: 8px;
+        color: $basicWhite;
 
-        @include desktop {
-            padding: 0 5%;
+        &:hover {
+            cursor: pointer;
         }
     }
 
     &__list {
-        width: 50%;
-        list-style: none;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 25px;
+        flex-basis: 50%;
+        justify-content: space-around;
+        list-style: none;
+        padding-top: 15px;
+        @include desktop{
+            flex-basis: 60%;
 
-        @include tablet-l {
-            background-color: $basicRed;
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            top: 4.5vh;
-            width: 80%;
-            height: 80vh;
-            left: -1000px;
-            transition: transform .4s;
-        }
-
-        @include mobile-xl {
-            top: 3vh;
         }
     }
 
-    &__item--link {
+    &__link {
         font-family: 'montserrat';
         font-size: 14px;
         text-decoration: none;
-        color: #fff;
+        text-transform: uppercase;
+        color: $basicWhite;
+        transition: .3s ease-out;
 
         &::after {
             content: '';
@@ -219,12 +54,7 @@
             position: relative;
             margin: 2px 0;
             opacity: 0;
-            transition: .4s;
-
-            @include tablet-l {
-                margin: 15px 0 0;
-
-            }
+            transition: .3s ease-out;
         }
 
         &:hover {
@@ -235,143 +65,102 @@
             }
         }
     }
+}
 
-    &__hamburger {
-        display: none;
+.center {
+    display: flex;
+    flex-direction: column;
 
-        // font-size: 30px;
-        &--top,
-        &--middle,
-        &--bottom {
-            display: block;
-            width: 35px;
-            height: 3px;
-            margin: 10px;
-            background-color: #fff;
-            transition: 1s;
-        }
+    &__text {
+        color: $basicWhite;
 
-        @include desktop {
-            padding: 0 5%;
-        }
-
-        @include tablet-l {
-            display: block;
-        }
-
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    &__toggle {
-        display: none;
-
-        &:checked~.nav__list {
-            @include tablet-l {
-
-                position: absolute;
-                display: flex;
-                top: 4.5vh;
-                flex-direction: column;
-                background-color: $basicRed;
-                width: 100%;
-                padding: 5%;
-                transition: 1s;
-                transform: translateX(1000px);
-
-                @include mobile-xl {
-                    top: 3vh;
-
-                }
-
-                @include mobile-horizontal {
-                    padding: 0px;
-                }
+        &--small {
+            font-family: 'kaushan';
+            font-weight: normal;
+            font-size: 72px;
+            margin: 115px auto 31px;
+            @include desktop{
+                font-size: 56px;
 
             }
+        }
 
-            .nav__item {
-                line-height: 20px;
+        &--big {
+            font-family: 'montserrat bold';
+            font-size: 150px;
+            line-height: 30%;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 45px 10%;
+            margin-bottom: 5px;
+            @include desktop{
+                font-size: 120px;
 
-                @include mobile-horizontal {
-                    line-height: 15px;
-                }
-
-                &--link {
-                    font-size: 18px;
-
-                    &::after {
-                        top: -15px;
-                        ;
-                    }
-                }
             }
         }
 
-        &:checked+label .nav__hamburger--top {
-            transform: translateY(13px) rotate(45deg);
-        }
-
-        &:checked+label .nav__hamburger--middle {
-            transform: translateY(0px) rotate(-45deg);
-        }
-
-        &:checked+label .nav__hamburger--bottom {
-            transform: scale(0) rotate(360deg);
-        }
     }
 
+    &__line {
+        display: block;
+        background-color: #fff;
+        height: 3px;
+        width: 60px;
+        margin: 52px auto 0;
+    }
+
+    &__button {
+        width: 160px;
+        height: 40px;
+        background: none;
+        border: 3px solid #fff;
+        font-family: 'montserrat bold';
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 50px auto;
+    }
 
 }
 
-//          PROGRESS BAR
 .progress {
-    position: relative;
-    font-family: 'montserrat';
-    height: 7.5vh;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    @include tablet {
-        padding: 0 5%;
+    padding: 100px 0;
+
+    // margin: 0 auto;
+
+    &__wrapper {
+        margin: 0 auto;
     }
 
     &__bar {
         background-color: #fff;
-        position: relative;
         height: 3px;
         width: 280px;
-        bottom: 0;
+        margin-bottom: 20px;
+        @include desktop{
+            width: 220px;
 
-
-        @include desktop {
-            width: 15vw;
         }
     }
 
     &__info {
-        height: 7vh;
         display: flex;
-        justify-content: start;
-        align-items: center;
+        color: $basicWhite;
     }
-
+    
     &__number {
         font-family: 'montserrat bold';
         font-size: 18px;
         padding-right: 10px;
-
-        @include mobile-xl {
-            display: none;
-
-        }
     }
-
-    &__text {
+    
+    &__section {
         font-family: 'montserrat';
         font-size: 13px;
-
+        text-transform: uppercase;
+        margin-top: 4px;
     }
+
 }

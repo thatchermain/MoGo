@@ -11,69 +11,68 @@
 </head>
 
 <body>
-    <!--     >>>     HEADER     <<<     -->
-    <header class="header">
-        <div class="header__content container">
-            <nav class="nav">
-                <div class="nav__logo">MoGo</div>
-                <input type="checkbox" id="toggle" class="nav__toggle">
-                <!-- <label for="toggle" class="nav__hamburger">&#9776</label> -->
-                <label for="toggle" class="nav__hamburger">
-                    <span class="nav__hamburger--top"></span>
-                    <span class="nav__hamburger--middle"></span>
-                    <span class="nav__hamburger--bottom"></span>
-                </label>
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__item--link" href="#about">About</a></li>
-                    <li class="nav__item"><a class="nav__item--link" href="">Service</a></li>
-                    <li class="nav__item"><a class="nav__item--link" href="">Work</a></li>
-                    <li class="nav__item"><a class="nav__item--link" href="">Blog</a></li>
-                    <li class="nav__item"><a class="nav__item--link" href="">Contact</a></li>
-                    <li class="nav__item"><a href=""><img src="./assets/images/SHOPPING CART.png" alt=""></a></li>
-                    <li class="nav__item"><a href=""><img src="./assets/images/MAGNIFYING GLASS.png" alt=""></a></li>
-                </ul>
-
-            </nav>
-
-            <div class="header__center">
-                <h3 class="header__creative">Creative Template</h3>
-                <h1 class="header__welcome">Welcome</h1>
-                <h1 class="header__welcome">to mogo</h1>
-                <span class="header__line"></span>
-                <button class="header__button">Learn more</button>
-            </div>
-
-            <div class="progress">
-                <div class="progress__block--one">
-                    <div class="progress__bar"></div>
-                    <div class="progress__info">
-                        <span class="progress__number">01</span>
-                        <span class="progress__text">Intro</span>
-                    </div>
-                </div>
-                <div class="progress__block--two">
-                    <div class="progress__bar"></div>
-                    <div class="progress__info">
-                        <span class="progress__number">02</span>
-                        <span class="progress__text">Work</span>
-                    </div>
-                </div>
-                <div class="progress__block--three">
-                    <div class="progress__bar"></div>
-                    <div class="progress__info">
-                        <span class="progress__number">03</span>
-                        <span class="progress__text">About</span>
-                    </div>
-                </div>
-                <div class="progress__block--four">
-                    <div class="progress__bar"></div>
-                    <div class="progress__info">
-                        <span class="progress__number">04</span>
-                        <span class="progress__text">Contacts</span>
-                    </div>
-                </div>
-            </div>
+    <!--     >>>    HOME     <<<     -->
+    <header class="home">
+        <nav class="nav container">
+            <div class="nav__logo">MoGo</div>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#about">about</a></li>
+                <li class="nav__item"><a class="nav__link" href="">service</a></li>
+                <li class="nav__item"><a class="nav__link" href="">work</a></li>
+                <li class="nav__item"><a class="nav__link" href="">blog</a></li>
+                <li class="nav__item"><a class="nav__link" href="">contact</a></li>
+                <li class="nav__item"><a class="nav__link" href=""><img src="./assets/images/SHOPPING CART.png"
+                            alt="cart"></a></li>
+                <li class="nav__item"><a class="nav__link" href=""><img src="./assets/images/MAGNIFYING GLASS.png"
+                            alt="glass"></a></li>
+            </ul>
+        </nav>
+        <div class="center">
+            <h3 class="center__text center__text--small">Creative Template</h3>
+            <h1 class="center__text center__text--big">welcome</h1>
+            <h1 class="center__text center__text--big">to mogo</h1>
+            <span class="center__text center__line"></span>
+            <button class="center__text center__button">learn more</button>
         </div>
+        <footer class="progress container">
+
+            <div class="progress__wrapper progress__wrapper--one">
+
+                <div class="progress__bar"></div>
+                <div class="progress__info">
+                    <span class="progress__number">01</span>
+                    <span class="progress__section">intro</span>
+                </div>
+            </div>
+
+            <div class="progress__wrapper progress__wrapper--two">
+
+                <div class="progress__bar"></div>
+                <div class="progress__info">
+                    <span class="progress__number">02</span>
+                    <span class="progress__section">work</span>
+                </div>
+            </div>
+
+            <div class="progress__wrapper progress__wrapper--three">
+
+                <div class="progress__bar"></div>
+                <div class="progress__info">
+                    <span class="progress__number">03</span>
+                    <span class="progress__section">about</span>
+                </div>
+            </div>
+
+            <div class="progress__wrapper progress__wrapper--four">
+
+                <div class="progress__bar"></div>
+                <div class="progress__info">
+                    <span class="progress__number">04</span>
+                    <span class="progress__section">contacts</span>
+                </div>
+            </div>
+
+        </footer>
 
     </header>
     <!--     >>>     ABOUT     <<<     -->
@@ -83,13 +82,14 @@
             <span class="about__title-middle title__middle--short">story about us</span>
             <span class="about__title-line title__line--short"></span>
         </header>
-        <main class="about__main container ">
-            <div class="about__info">
+        <main class="about__main">
+            <div class="about__info container">
+
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
-            <div class="about__gallery">
+            <div class="about__gallery container">
                 <div class="about__image about__image--one">
                     <span class="about__span-icon about__span-icon--one"></span>
                     <span class="about__span-text">super team</span>

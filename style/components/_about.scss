@@ -35,34 +35,44 @@
 .about {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 
-    &__center {
-        height: 540px;
-    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        }
 
     &__info {
-        height: 70px;
+        min-height: 70px;
         width: 100%;
         display: flex;
         align-items: center;
         text-align: center;
-        padding: 0 110px;
+        padding: 0 10%;
     }
 
     &__text {
         font-family: 'roboto';
         font-size: 15px;
         line-height: 24px;
+        // margin: 0;
         color: $textLight;
     }
 
     &__gallery {
-        height: 250px;
-        margin: 100px 0;
+        min-height: 250px;
+        margin: 100px auto;
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include desktop{
+            // display: block;
+            display: flex;  
+            flex-direction: column;
+            justify-content: space-between;
+            width: 380px;
+            padding: 5% auto;
+        }
     }
 
     &__image {
@@ -81,10 +91,13 @@
             background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9));
             opacity: 0;
             transition: .3s ease-out;
+            
+
         }
 
         & img {
             transition: .3s ease-out;
+
         }
 
         &:hover img {
