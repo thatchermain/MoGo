@@ -1,9 +1,3 @@
-// @mixin bgPositionGrid {
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-// }
-
 .title {
     width: 100%;
     display: flex;
@@ -74,7 +68,8 @@
     &__image {
         position: relative;
         background-color: $basicBlue;
-        transition: .4s ease-out;
+        transition: .3s ease-out;
+        cursor: pointer;
 
         &::after {
             position: absolute;
@@ -85,11 +80,16 @@
             width: 100%;
             background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9));
             opacity: 0;
-            transition: .4s ease-out;
+            transition: .3s ease-out;
+        }
+
+        & img {
+            transition: .3s ease-out;
         }
 
         &:hover img {
             transform: translate(-10px, -10px);
+
         }
 
         &:hover .about__span-icon {
@@ -106,14 +106,12 @@
             transform: translate(-10px, -10px);
             opacity: 1;
         }
-
     }
 
     &__span-icon {
         position: absolute;
         opacity: 0;
         color: $basicWhite;
-        background-image: url('../assets/images/about/users.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -121,8 +119,12 @@
         width: 10%;
         inset: 50% 0 0 50%;
         transform: translate(-50%, -200%);
-        transition: .4s ease-out;
+        transition: .3s ease-out;
 
+        &--one {
+            background-image: url('../assets/images/about/users.png');
+
+        }
     }
 
     &__span-text {
@@ -136,7 +138,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: .4s ease-out;
+        transition: .3s ease-out;
     }
 
     &__footer {

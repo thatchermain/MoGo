@@ -673,8 +673,9 @@ body {
 .about__image {
   position: relative;
   background-color: #95e1d3;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  cursor: pointer;
 }
 
 .about__image::after {
@@ -687,8 +688,13 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9)));
   background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
   opacity: 0;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.about__image img {
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 
 .about__image:hover img {
@@ -716,7 +722,6 @@ body {
   position: absolute;
   opacity: 0;
   color: white;
-  background-image: url("../assets/images/about/users.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -725,8 +730,12 @@ body {
   inset: 50% 0 0 50%;
   -webkit-transform: translate(-50%, -200%);
           transform: translate(-50%, -200%);
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.about__span-icon--one {
+  background-image: url("../assets/images/about/users.png");
 }
 
 .about__span-text {
@@ -741,8 +750,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 
 .about__footer {
