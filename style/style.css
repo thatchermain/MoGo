@@ -659,36 +659,90 @@ body {
 }
 
 .about__gallery {
-  height: 450px;
+  height: 250px;
+  margin: 100px 0;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.about__image--one {
-  background-image: url("../assets/images/about/keyboard.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.about__image {
+  position: relative;
+  background-color: #95e1d3;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
 }
 
-.about__image--two {
-  background-image: url("../assets/images/about/headphones.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.about__image::after {
+  position: absolute;
+  top: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9)));
+  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
+  opacity: 0;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
 }
 
-.about__image--three {
-  background-image: url("../assets/images/about/pot.jpg");
-  background-size: contain;
+.about__image:hover img {
+  -webkit-transform: translate(-10px, -10px);
+          transform: translate(-10px, -10px);
+}
+
+.about__image:hover .about__span-icon {
+  z-index: 1;
+  opacity: 1;
+}
+
+.about__image:hover .about__span-text {
+  z-index: 1;
+  opacity: 1;
+}
+
+.about__image:hover::after {
+  -webkit-transform: translate(-10px, -10px);
+          transform: translate(-10px, -10px);
+  opacity: 1;
+}
+
+.about__span-icon {
+  position: absolute;
+  opacity: 0;
+  color: white;
+  background-image: url("../assets/images/about/users.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  height: 10%;
+  width: 10%;
+  inset: 50% 0 0 50%;
+  -webkit-transform: translate(-50%, -200%);
+          transform: translate(-50%, -200%);
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+
+.about__span-text {
+  position: absolute;
+  color: white;
+  font-family: 'montserrat bold';
+  font-size: 18px;
+  text-transform: uppercase;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
 }
 
 .about__footer {

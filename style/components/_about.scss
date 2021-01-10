@@ -1,8 +1,8 @@
-@mixin bgPositionGrid {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+// @mixin bgPositionGrid {
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+// }
 
 .title {
     width: 100%;
@@ -64,31 +64,79 @@
     }
 
     &__gallery {
-        height: 450px;
+        height: 250px;
+        margin: 100px 0;
         width: 100%;
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 15px;
-
+        display: flex;
+        justify-content: space-between;
     }
 
     &__image {
-        &--one {
-            background-image: url('../assets/images/about/keyboard.jpg');
-            @include bgPositionGrid();
+        position: relative;
+        background-color: $basicBlue;
+        transition: .4s ease-out;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9));
+            opacity: 0;
+            transition: .4s ease-out;
         }
 
-        &--two {
-            background-image: url('../assets/images/about/headphones.jpg');
-            @include bgPositionGrid();
+        &:hover img {
+            transform: translate(-10px, -10px);
         }
 
-        &--three {
-            background-image: url('../assets/images/about/pot.jpg');
-            @include bgPositionGrid();
+        &:hover .about__span-icon {
+            z-index: 1;
+            opacity: 1;
         }
 
+        &:hover .about__span-text {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        &:hover::after {
+            transform: translate(-10px, -10px);
+            opacity: 1;
+        }
+
+    }
+
+    &__span-icon {
+        position: absolute;
+        opacity: 0;
+        color: $basicWhite;
+        background-image: url('../assets/images/about/users.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 10%;
+        width: 10%;
+        inset: 50% 0 0 50%;
+        transform: translate(-50%, -200%);
+        transition: .4s ease-out;
+
+    }
+
+    &__span-text {
+        position: absolute;
+        color: $basicWhite;
+        font-family: 'montserrat bold';
+        font-size: 18px;
+        text-transform: uppercase;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .4s ease-out;
     }
 
     &__footer {
