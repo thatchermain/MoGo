@@ -118,24 +118,17 @@ body {
 }
 
 .header__center {
-  height: 92.5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 70vh;
+  width: 100%;
+  text-align: center;
 }
 
 .header__creative {
   font-family: 'kaushan';
   font-size: 72px;
   position: relative;
-  top: 140px;
+  margin-top: 15vh;
+  margin-top: 22vh;
 }
 
 @media (max-width: 1200px) {
@@ -174,10 +167,9 @@ body {
 .header__welcome {
   font-family: 'montserrat bold';
   font-size: 150px;
-  line-height: 140px;
+  line-height: 85px;
   text-transform: uppercase;
-  position: relative;
-  top: 165px;
+  margin-top: 5.5vh;
 }
 
 @media (max-width: 1200px) {
@@ -215,8 +207,7 @@ body {
   background-color: #fff;
   height: 3px;
   width: 60px;
-  position: relative;
-  top: 220px;
+  margin: 8.5vh auto 0;
 }
 
 @media (max-width: 1024px) {
@@ -254,8 +245,7 @@ body {
   text-transform: uppercase;
   background: none;
   border: 3px solid #fff;
-  position: relative;
-  top: 270px;
+  margin: 5vh auto;
   cursor: pointer;
 }
 
@@ -363,7 +353,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 4.9vh;
+    top: 4.5vh;
     width: 80%;
     height: 80vh;
     left: -1000px;
@@ -454,7 +444,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 4.9vh;
+    top: 4.5vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -515,6 +505,7 @@ body {
 }
 
 .progress {
+  position: relative;
   font-family: 'montserrat';
   height: 7.5vh;
   display: -webkit-box;
@@ -539,7 +530,7 @@ body {
   position: relative;
   height: 3px;
   width: 280px;
-  margin-top: 0;
+  bottom: 0;
 }
 
 @media (max-width: 1200px) {

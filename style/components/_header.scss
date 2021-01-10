@@ -12,18 +12,18 @@
     justify-content: center;
 
     &__center {
-        height: 92.5vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
+        height: 70vh;
+        width: 100%;
+        text-align: center;
     }
 
     &__creative {
         font-family: 'kaushan';
         font-size: 72px;
         position: relative;
-        top: 140px;
+        margin-top: 15vh;
+        margin-top: 22vh;
+        
 
         @include desktop {
             font-size: 58px;
@@ -53,10 +53,10 @@
     &__welcome {
         font-family: 'montserrat bold';
         font-size: 150px;
-        line-height: 140px;
-        text-transform: uppercase;
-        position: relative;
-        top: 165px;
+        line-height: 85px;
+        text-transform: uppercase;  
+        margin-top: 5.5vh;
+
 
         @include desktop {
             font-size: 120px;
@@ -86,8 +86,7 @@
         background-color: #fff;
         height: 3px;
         width: 60px;
-        position: relative;
-        top: 220px;
+        margin: 8.5vh auto 0;
 
         @include tablet-l {
             top: 200px;
@@ -118,8 +117,7 @@
         text-transform: uppercase;
         background: none;
         border: 3px solid #fff;
-        position: relative;
-        top: 270px;
+        margin: 5vh auto;
         cursor: pointer;
 
         @include tablet-l {
@@ -194,7 +192,7 @@
             position: fixed;
             display: flex;
             flex-direction: column;
-            top: 4.9vh;
+            top: 4.5vh;
             width: 80%;
             height: 80vh;
             left: -1000px;
@@ -275,7 +273,7 @@
 
                 position: absolute;
                 display: flex;
-                top: 4.9vh;
+                top: 4.5vh;
                 flex-direction: column;
                 background-color: $basicRed;
                 width: 100%;
@@ -330,12 +328,12 @@
 
 //          PROGRESS BAR
 .progress {
+    position: relative;
     font-family: 'montserrat';
     height: 7.5vh;
     display: flex;
     justify-content: space-between;
     align-items: start;
-
     @include tablet {
         padding: 0 5%;
     }
@@ -345,7 +343,8 @@
         position: relative;
         height: 3px;
         width: 280px;
-        margin-top: 0;
+        bottom: 0;
+
 
         @include desktop {
             width: 15vw;
