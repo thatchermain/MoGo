@@ -99,8 +99,8 @@ body {
 }
 
 .home {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("./assets/images/header.jpg");
-  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("./assets/images/header.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/header.jpg");
+  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/header.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
