@@ -1,72 +1,58 @@
-.title {
+.title{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &__top--short {
-        position: relative;
+    &__top{
+        display: block;
         font-family: 'kaushan';
         font-size: 24px;
-        top: 9px;
-        color: $textDark;
+        text-align: center;
+        color: rgb(51,51,51);
+        margin: 4.50% auto 0;
     }
-
-    &__middle--short {
-        position: relative;
+    &__middle{
+        display: block;
         font-family: 'montserrat bold';
         font-size: 30px;
         text-transform: uppercase;
-        top: 17px;
-        color: $textDark;
+        text-align: center;
+        color: rgb(51,51,51);
+        margin: 0.45% auto 0;
     }
-
-    &__line--short {
-        position: relative;
-        top: 51px;
+    &__line{
         display: block;
         background-color: $basicRed;
         width: 60px;
         height: 3px;
+        margin: 1.8% auto 1.5%;
     }
 }
+
 
 .about {
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    margin: 0 auto;
 
     &__main {
         display: flex;
         flex-direction: column;
         }
 
-    &__info {
-        min-height: 70px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 0 10%;
-    }
-
     &__text {
         font-family: 'roboto';
         font-size: 15px;
         line-height: 24px;
-        // margin: 0;
+        text-align: center;
+        margin: 0.6% auto;
         color: $textLight;
     }
 
     &__gallery {
         min-height: 250px;
-        margin: 100px auto;
+        margin: 4.5% auto;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @include desktop{
-            // display: block;
+        @include desktop{ 
             display: flex;  
             flex-direction: column;
             justify-content: space-between;
@@ -154,21 +140,22 @@
         transition: .3s ease-out;
     }
 
+
+
+
     &__footer {
-        background-color: $basicBlue;
         width: 100%;
-        height: 270px;
         display: flex;
-        justify-content: center;
+        background-color: $basicBlue;
+        margin: 1.2% auto;
+        // margin: 2.5% 0;
     }
 
     &__stats {
-        position: relative;
-        width: 240px;
+        width: 20%;
         height: 270px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         color: $basicWhite;
         border-right: 1px solid rgb(216, 216, 216);
@@ -179,17 +166,17 @@
     }
 
     &__number {
+        display: block;
         font-family: 'montserrat bold';
         font-size: 72px;
-        position: absolute;
-        top: 57px;
+        margin: 28.5% auto 0;
     }
 
     &__what-of {
         font-family: 'montserrat';
         font-size: 14px;
         text-transform: uppercase;
-        position: absolute;
-        bottom: 90px;
+        margin: 3.5% auto 0;
+
     }
 }

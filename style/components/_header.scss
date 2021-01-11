@@ -1,10 +1,11 @@
 .home {
-    background-image: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/header.jpg');
+    background-image: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('./assets/images/header.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    // min-height: 100vh;
-    height: 1000px;
+    position: relative;
+    max-height: 100vh;
+    max-height: 1000px;
     width: 100%;
 }
 
@@ -13,7 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 1.1% 0;
+    margin: 0 auto;
 
     &__logo {
         font-family: 'montserrat bold';
@@ -29,8 +31,9 @@
         display: flex;
         flex-basis: 50%;
         justify-content: space-around;
+        align-items: flex-end;
         list-style: none;
-        padding-top: 15px;
+        margin: 1% 0 0;
         @include desktop{
             flex-basis: 60%;
 
@@ -68,35 +71,40 @@
 }
 
 .center {
-    display: flex;
-    flex-direction: column;
-
+    
     &__text {
+
         color: $basicWhite;
 
         &--small {
             font-family: 'kaushan';
             font-weight: normal;
             font-size: 72px;
-            margin: 115px auto 31px;
-            @include desktop{
-                font-size: 56px;
+            text-align: center;
+            margin: 6.55% auto 0;
+            // @include desktop{
+            //     font-size: 56px;
 
-            }
+            // }
         }
 
         &--big {
             font-family: 'montserrat bold';
             font-size: 150px;
-            line-height: 30%;
             text-transform: uppercase;
             text-align: center;
-            padding: 45px 10%;
-            margin-bottom: 5px;
-            @include desktop{
-                font-size: 120px;
+            line-height: 80%;
+            // padding: 5% 10%;
+            // @include desktop{
+            //     font-size: 120px;
 
-            }
+            // }
+        }
+        &--big-top{
+            margin: 2.05% auto 0;
+        }
+        &--big-bottom{
+            margin: 1.05% auto 0;
         }
 
     }
@@ -106,10 +114,11 @@
         background-color: #fff;
         height: 3px;
         width: 60px;
-        margin: 52px auto 0;
+        margin: 3.35% auto 0;
     }
 
     &__button {
+        display: block;
         width: 160px;
         height: 40px;
         background: none;
@@ -119,34 +128,37 @@
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
-        margin: 50px auto;
+        margin: 2.6% auto 2.6%;
     }
 
 }
 
 .progress {
     display: flex;
-    padding: 100px 0;
+    padding: 4.25% 0 1.5%;
 
-    // margin: 0 auto;
+    margin: 0 auto;
 
     &__wrapper {
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     &__bar {
         background-color: #fff;
         height: 3px;
         width: 280px;
-        margin-bottom: 20px;
+        margin: 7% auto;
         @include desktop{
-            width: 220px;
+            width: 15vw;
 
         }
     }
 
     &__info {
         display: flex;
+        align-items: center;
         color: $basicWhite;
     }
     
