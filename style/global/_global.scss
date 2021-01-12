@@ -17,13 +17,13 @@ body {
     overflow-x: hidden;
 }
 .container {
-    max-width: 1200px;
+    max-width: 63vw;
     @include desktop {
-        max-width: 80%;
-
+        max-width: 83vw;
+        // max-width: 80%;
     }
     @include tablet{
-        width: 100%;
+        // width: 100%;
     }
 }
 
