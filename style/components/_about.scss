@@ -1,23 +1,26 @@
-.title{
+.title {
     width: 100%;
-    &__top{
+
+    &__top {
         display: block;
         font-family: 'kaushan';
         font-size: 24px;
         text-align: center;
-        color: rgb(51,51,51);
+        color: rgb(51, 51, 51);
         margin: 4.50% auto 0;
     }
-    &__middle{
+
+    &__middle {
         display: block;
         font-family: 'montserrat bold';
         font-size: 30px;
         text-transform: uppercase;
         text-align: center;
-        color: rgb(51,51,51);
+        color: rgb(51, 51, 51);
         margin: 0.45% auto 0;
     }
-    &__line{
+
+    &__line {
         display: block;
         background-color: $basicRed;
         width: 60px;
@@ -32,11 +35,6 @@
     flex-direction: column;
     margin: 0 auto;
 
-    &__main {
-        display: flex;
-        flex-direction: column;
-        }
-
     &__text {
         font-family: 'roboto';
         font-size: 15px;
@@ -44,51 +42,74 @@
         text-align: center;
         margin: 0.6% auto;
         color: $textLight;
+
+        @include tablet {
+            margin: 2.6% auto 10%;
+
+        }
     }
 
     &__gallery {
-        min-height: 250px;
-        margin: 4.5% auto;
+        height: 15vw;
+        margin: 5% auto 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @include desktop{ 
-            display: flex;  
+
+        @include desktop {
+            padding: 5% auto;
+        }
+
+        @include tablet-m {
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 380px;
-            padding: 5% auto;
+            align-items: center;
+            height: 100%;
         }
     }
 
     &__image {
-        position: relative;
-        background-color: $basicBlue;
+        width: 30%;
+        max-height: 250px;
         transition: .3s ease-out;
+        padding: 4%;
         cursor: pointer;
 
-        &::after {
-            position: absolute;
-            top: 0;
-            content: '';
-            display: block;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9));
-            opacity: 0;
-            transition: .3s ease-out;
-            
+        &--one {
+            background: url('../assets/images/about/keyboardS.jpg');
+            background-size: cover;
 
+            &:hover {
+                background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/keyboardS.jpg');
+                transform: translate(-20px, -20px);
+            }
         }
 
-        & img {
-            transition: .3s ease-out;
+        &--two {
+            background: url('../assets/images/about/headphones.jpg');
+            background-size: cover;
 
+            &:hover {
+                background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/headphones.jpg');
+                transform: translate(-20px, -20px);
+            }
         }
 
-        &:hover img {
-            transform: translate(-10px, -10px);
+        &--three {
+            background: url('../assets/images/about/pot.jpg');
+            background-size: cover;
 
+            &:hover {
+                background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/pot.jpg');
+                transform: translate(-20px, -20px);
+            }
+        }
+
+        @include tablet-m {
+            width: 50%;
+            padding: 15%;
+            margin: 5%;
         }
 
         &:hover .about__span-icon {
@@ -130,7 +151,7 @@
         position: absolute;
         color: $basicWhite;
         font-family: 'montserrat bold';
-        font-size: 18px;
+        font-size: calc(10px + 8 * ((100vw - 360px) / (1920 - 360)));
         text-transform: uppercase;
         display: block;
         top: 50%;
@@ -141,19 +162,27 @@
     }
 
 
-
-
     &__footer {
         width: 100%;
         display: flex;
         background-color: $basicBlue;
-        margin: 1.2% auto;
-        // margin: 2.5% 0;
+        margin: 3.8% auto;
+
+        @include tablet {
+            margin: 10.8% auto;
+        }
+
+        @include mobile-xl {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
     }
 
     &__stats {
         width: 20%;
-        height: 270px;
+        height: 14vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -163,20 +192,42 @@
         &--one {
             border-left: 1px solid rgb(216, 216, 216);
         }
+
+        @include mobile-xl {
+            width: 100%;
+            border-bottom: 1px solid rgb(216, 216, 216);
+
+        }
     }
 
     &__number {
         display: block;
         font-family: 'montserrat bold';
-        font-size: 72px;
+        font-size: calc(16px + 56 * ((100vw - 360px) / (1920 - 360)));
         margin: 28.5% auto 0;
+
+        @include desktop {
+            margin: 18.5% auto 0;
+        }
+
+        @include tablet-m {
+            margin: 8.5% auto 0;
+        }
+
+        @include mobile-xl {
+            margin: 0 auto;
+        }
     }
 
     &__what-of {
         font-family: 'montserrat';
-        font-size: 14px;
+        font-size: calc(12px + 2 * ((100vw - 360px) / (1920 - 360)));
         text-transform: uppercase;
+        text-align: center;
         margin: 3.5% auto 0;
 
+        @include desktop {
+            padding: 0 10%;
+        }
     }
 }

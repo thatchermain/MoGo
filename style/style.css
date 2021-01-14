@@ -493,16 +493,6 @@ body {
   margin: 0 auto;
 }
 
-.about__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .about__text {
   font-family: 'roboto';
   font-size: 15px;
@@ -512,9 +502,15 @@ body {
   color: #999999;
 }
 
+@media (max-width: 720px) {
+  .about__text {
+    margin: 2.6% auto 10%;
+  }
+}
+
 .about__gallery {
-  min-height: 250px;
-  margin: 4.5% auto;
+  height: 15vw;
+  margin: 5% auto 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,6 +522,12 @@ body {
 
 @media (max-width: 1200px) {
   .about__gallery {
+    padding: 5% auto;
+  }
+}
+
+@media (max-width: 970px) {
+  .about__gallery {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -536,41 +538,64 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 380px;
-    padding: 5% auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
   }
 }
 
 .about__image {
-  position: relative;
-  background-color: #95e1d3;
+  width: 30%;
+  max-height: 250px;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
+  padding: 4%;
   cursor: pointer;
 }
 
-.about__image::after {
-  position: absolute;
-  top: 0;
-  content: '';
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9)));
-  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
-  opacity: 0;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+.about__image--one {
+  background: url("../assets/images/about/keyboardS.jpg");
+  background-size: cover;
 }
 
-.about__image img {
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+.about__image--one:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/about/keyboardS.jpg");
+  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/about/keyboardS.jpg");
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
 }
 
-.about__image:hover img {
-  -webkit-transform: translate(-10px, -10px);
-          transform: translate(-10px, -10px);
+.about__image--two {
+  background: url("../assets/images/about/headphones.jpg");
+  background-size: cover;
+}
+
+.about__image--two:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/about/headphones.jpg");
+  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/about/headphones.jpg");
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
+}
+
+.about__image--three {
+  background: url("../assets/images/about/pot.jpg");
+  background-size: cover;
+}
+
+.about__image--three:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/about/pot.jpg");
+  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/about/pot.jpg");
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
+}
+
+@media (max-width: 970px) {
+  .about__image {
+    width: 50%;
+    padding: 15%;
+    margin: 5%;
+  }
 }
 
 .about__image:hover .about__span-icon {
@@ -613,7 +638,7 @@ body {
   position: absolute;
   color: white;
   font-family: 'montserrat bold';
-  font-size: 18px;
+  font-size: calc(10px + 8 * ((100vw - 360px) / (1920 - 360)));
   text-transform: uppercase;
   display: block;
   top: 50%;
@@ -631,12 +656,36 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #95e1d3;
-  margin: 1.2% auto;
+  margin: 3.8% auto;
+}
+
+@media (max-width: 720px) {
+  .about__footer {
+    margin: 10.8% auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 
 .about__stats {
   width: 20%;
-  height: 270px;
+  height: 14vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -655,16 +704,48 @@ body {
   border-left: 1px solid #d8d8d8;
 }
 
+@media (max-width: 600px) {
+  .about__stats {
+    width: 100%;
+    border-bottom: 1px solid #d8d8d8;
+  }
+}
+
 .about__number {
   display: block;
   font-family: 'montserrat bold';
-  font-size: 72px;
+  font-size: calc(16px + 56 * ((100vw - 360px) / (1920 - 360)));
   margin: 28.5% auto 0;
+}
+
+@media (max-width: 1200px) {
+  .about__number {
+    margin: 18.5% auto 0;
+  }
+}
+
+@media (max-width: 970px) {
+  .about__number {
+    margin: 8.5% auto 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__number {
+    margin: 0 auto;
+  }
 }
 
 .about__what-of {
   font-family: 'montserrat';
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 360px) / (1920 - 360)));
   text-transform: uppercase;
+  text-align: center;
   margin: 3.5% auto 0;
+}
+
+@media (max-width: 1200px) {
+  .about__what-of {
+    padding: 0 10%;
+  }
 }
