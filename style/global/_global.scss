@@ -15,15 +15,14 @@ body {
     width: 100vw;
     height: 300vh;
     overflow-x: hidden;
+
 }
 .container {
-    max-width: 63vw;
+    max-width: 1200px;
     @include desktop {
-        max-width: 83vw;
-        // max-width: 80%;
-    }
-    @include tablet{
-        // width: 100%;
+        width: 100%;
+        padding: 0 5%;
+
     }
 }
 

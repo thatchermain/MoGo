@@ -4,30 +4,37 @@
     background-position: center center;
     background-size: cover;
     position: relative;
-    max-height: 100vh;
+    max-height: 100%;
     width: 100%;
+    @include desktop{
+
+        
+    }
 }
 
 .nav {
+    // background: linear-gradient(($basicRed), ($basicYellow));
     position: fixed;
     top: 0;
-    width: 63vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 1% 0;
-    margin: 0 18.7%;
-    @include desktop{
-        width: 82.5vw;
-        margin: 0 9%;
+    width: 100%;
+    &__navbar{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 1% 0;
+        margin: 0 auto;
+        @include desktop{
+            padding: 1% 5%;
+        }
     }
 
     &__logo {
         font-family: 'montserrat bold';
         font-size: 30px;
         color: $basicWhite;
-
+        padding: 0 .5%;
         &:hover {
             cursor: pointer;
         }
@@ -36,18 +43,15 @@
     &__list {
         display: flex;
         flex-basis: 50%;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-end;
         list-style: none;
         margin: 1% 0 0;
-        @include desktop-xl{
+        padding: 0 1%;
+        @include desktop{
             flex-basis: 65%;
         }
-      
-        @include tablet-m{
-            flex-basis: 65%;
-        }
-        
+
         @include tablet {
             display: flex;
             flex-direction: column;
@@ -63,11 +67,7 @@
     }
 
     &__item {
-        @include tablet {
-            padding: 3%;
-            margin: 0 auto;
 
-        }
     }
 
     &__link {
@@ -77,10 +77,6 @@
         text-transform: uppercase;
         color: $basicWhite;
         transition: .3s ease-out;
-
-        @include tablet {
-            display: block;
-        }
 
         &::after {
             content: '';
@@ -171,26 +167,22 @@
 }
 
 .center {
-    @include desktop{
-        padding: 9% 0;
-    }
-    &__text {
 
-        color: $basicWhite;
-
-        &--small {
+        &__text {
+            
+            color: $basicWhite;
+            
+            &--small {
             font-family: 'kaushan';
             font-weight: normal;
             font-size: 72px;
             text-align: center;
-            padding: 10.9% 0 0 ;
-            @include desktop-xl{
-                font-size: calc(36px + 36 * ((100vw - 360px) / (1920 - 360)));
-            }
-            @include tablet{
-                font-size: calc(22px + 22 * ((100vw - 360px) / (1920 - 360)));
-                margin:0;
-
+            // padding: 10.9% 0 0 ;
+            padding: 210px 0 0 ;
+            // margin: 10.9% auto 0 ;
+            @include desktop{
+                font-size: calc(36px + 36 * ((100vw - 360px) / (1200 - 360)));
+                // padding: 17.5% 0 0 ;
             }
         }
 
@@ -200,21 +192,19 @@
             text-transform: uppercase;
             text-align: center;
             line-height: 80%;
-            @include desktop-xl{
-                font-size: calc(75px + 75 * ((100vw - 360px) / (1920 - 360)));
-            }
-            @include tablet{
-                font-size: calc(48px + 48 * ((100vw - 360px) / (1920 - 360)));
-
+            @include desktop{
+                font-size: calc(56px + 94 * ((100vw - 360px) / (1200 - 360)));
             }
         }
 
         &--big-top {
             margin: 2.05% auto 0;
+            margin: 38px auto 0;
         }
 
         &--big-bottom {
             margin: 1.05% auto 0;
+            margin: 20px auto 0;
         }
 
     }
@@ -225,6 +215,7 @@
         height: 3px;
         width: 60px;
         margin: 3.35% auto 0;
+        margin: 63px auto 0;
     }
 
     &__button {
@@ -239,26 +230,21 @@
         text-transform: uppercase;
         cursor: pointer;
         margin: 2.6% auto 2.6%;
+        margin: 50px auto 2.6%;
     }
 
 }
 
 .progress {
     display: flex;
-    padding: 4.25% 0 1.5%;
-    width: 63vw;
     margin: 0 auto;
-    @include desktop{
-        width: 82.5vw;
-        margin: 0 9%;
-    }
+
 
     &__wrapper {
-        margin: 1.6% 1.7% 0 0;
-        padding: 1.8% 0;
+        margin: 100px 1.7% 30px 0;
         display: flex;
         border-top: 3px solid $basicWhite;
-        width: 24vw;    
+        width: 100%;    
     }
 
     &__span {
@@ -268,20 +254,14 @@
     &__number {
         font-family: 'montserrat bold';
         font-size: 18px;
-        padding-right: 10px;
-        @include tablet{
-            font-size: calc(14px + 14 * ((100vw - 360px) / (1920 - 360)));
-        }    
+        padding: 20px 10px 0 0;
     }
 
     &__section {
         font-family: 'montserrat';
         font-size: 13px;
         text-transform: uppercase;
-        margin-top: 4px;
-        @include tablet{
-            font-size: calc(11px + 11 * ((100vw - 360px) / (1920 - 360)));
-        }
+        padding: 23px 10px 0 0;
     }
 
 }
