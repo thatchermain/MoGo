@@ -364,8 +364,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 2.6% auto 2.6%;
-  margin: 50px auto 2.6%;
+  margin: 50px auto 50px;
 }
 
 .progress {
@@ -411,7 +410,13 @@ body {
   font-size: 24px;
   text-align: center;
   color: #333333;
-  margin: 4.50% auto 0;
+  margin: 85px auto 0;
+}
+
+@media (max-width: 1200px) {
+  .title__top {
+    margin: 4.50% auto 0;
+  }
 }
 
 .title__middle {
@@ -421,7 +426,13 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #333333;
-  margin: 0.45% auto 0;
+  margin: 8px auto 0;
+}
+
+@media (max-width: 1200px) {
+  .title__middle {
+    margin: 0.45% auto 0;
+  }
 }
 
 .title__line {
@@ -429,7 +440,7 @@ body {
   background-color: #f38181;
   width: 60px;
   height: 3px;
-  margin: 1.8% auto 1.5%;
+  margin: 34px auto;
 }
 
 .about {
@@ -448,8 +459,15 @@ body {
   font-size: 15px;
   line-height: 24px;
   text-align: center;
-  margin: 0.6% auto;
+  margin: 5px auto;
+  padding: 0 5%;
   color: #999999;
+}
+
+@media (max-width: 1200px) {
+  .about__text {
+    margin: 0.6% auto;
+  }
 }
 
 @media (max-width: 720px) {
@@ -459,20 +477,25 @@ body {
 }
 
 .about__gallery {
-  height: 15vw;
-  margin: 5% auto 0;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1%;
+  min-height: 250px;
+  margin: 100px auto 0;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
   .about__gallery {
-    padding: 5% auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -491,17 +514,34 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
   }
 }
 
 .about__image {
-  width: 30%;
+  width: 360px;
   max-height: 250px;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
   padding: 4%;
   cursor: pointer;
+}
+
+.about__image:hover {
+  -webkit-box-shadow: 10px 10px 1px #95e1d3;
+          box-shadow: 10px 10px 1px #95e1d3;
+}
+
+@media (max-width: 1200px) {
+  .about__image {
+    height: 250px;
+    margin: 1% auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__image {
+    max-width: 360px;
+  }
 }
 
 .about__image--one {
@@ -542,7 +582,6 @@ body {
 
 @media (max-width: 970px) {
   .about__image {
-    width: 50%;
     padding: 15%;
     margin: 5%;
   }
@@ -606,7 +645,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #95e1d3;
-  margin: 3.8% auto;
+  margin: 110px auto;
+}
+
+@media (max-width: 1200px) {
+  .about__footer {
+    margin: 3.8% auto;
+  }
 }
 
 @media (max-width: 720px) {
@@ -635,7 +680,7 @@ body {
 
 .about__stats {
   width: 20%;
-  height: 14vw;
+  height: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,6 +693,15 @@ body {
           align-items: center;
   color: white;
   border-right: 1px solid #d8d8d8;
+}
+
+@media (max-width: 1200px) {
+  .about__stats {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
 }
 
 .about__stats--one {
@@ -664,13 +718,13 @@ body {
 .about__number {
   display: block;
   font-family: 'montserrat bold';
-  font-size: calc(16px + 56 * ((100vw - 360px) / (1920 - 360)));
   margin: 28.5% auto 0;
+  font-size: 72px;
 }
 
 @media (max-width: 1200px) {
   .about__number {
-    margin: 18.5% auto 0;
+    font-size: calc(16px + 56 * ((100vw - 360px) / (1920 - 360)));
   }
 }
 
@@ -680,15 +734,9 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .about__number {
-    margin: 0 auto;
-  }
-}
-
 .about__what-of {
   font-family: 'montserrat';
-  font-size: calc(12px + 2 * ((100vw - 360px) / (1920 - 360)));
+  font-size: 14px;
   text-transform: uppercase;
   text-align: center;
   margin: 3.5% auto 0;
@@ -697,5 +745,7 @@ body {
 @media (max-width: 1200px) {
   .about__what-of {
     padding: 0 10%;
+    font-size: calc(12px + 2 * ((100vw - 360px) / (1920 - 360)));
+    margin-bottom: 28.5%;
   }
 }
