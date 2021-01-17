@@ -68,47 +68,56 @@
     &__gallery {
         display: flex;
         justify-content: space-between;
-        gap: 1%;
+        gap: 1vw;
         min-height: 250px;
-        margin: 100px auto 0;
         width: 100%;
+        margin: 100px auto 0;
         
         @include desktop {
-            // padding: 5% auto;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+            margin: 5% auto ;
 
-        @include tablet-m {
+        }
+        
+        @include tablet {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            // max-width: 360px;
+
         }
     }
-
+    
     &__image {
+        flex: 1 1 100%;
         width: 360px;
-        max-height: 250px;
+        height: 250px;
         transition: .3s ease-out;
-        padding: 4%;
         cursor: pointer;
         &:hover{
             box-shadow: 10px 10px 1px $basicBlue;
         }
         @include desktop{
-            height: 250px;
-            margin: 1% auto;
+            width: 30%;
+            hight: 100%;
+            margin:0;
         }
-        @include mobile-xl{
-            max-width: 360px;
+        @include tablet-m {
+            padding: 10%;
         }
-
+        @include tablet{
+            width: 100%;
+            margin: 0;
+            padding: 30%;
+        }
+     
         &--one {
-            background: url('../assets/images/about/keyboardS.jpg');
+            background: url('../assets/images/about/keyboardS.jpg') no-repeat center center;
             background-size: cover;
-
+            @include desktop{
+                background-size: contain;
+            }
+            @include tablet{
+                background-size: cover;
+            }
             &:hover {
                 background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/keyboardS.jpg');
                 transform: translate(-20px, -20px);
@@ -117,8 +126,14 @@
         }
 
         &--two {
-            background: url('../assets/images/about/headphones.jpg');
+            background: url('../assets/images/about/headphones.jpg') no-repeat center center;
             background-size: cover;
+            @include desktop{
+                background-size: contain;
+            }
+            @include tablet{
+                background-size: cover;
+            }
 
             &:hover {
                 background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/headphones.jpg');
@@ -127,19 +142,20 @@
         }
 
         &--three {
-            background: url('../assets/images/about/pot.jpg');
+            background: url('../assets/images/about/pot.jpg') no-repeat center center;
             background-size: cover;
+            @include desktop{
+                background-size: contain;
+            }
+            @include tablet{
+                background-size: cover;
+            
+            }
 
             &:hover {
                 background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/pot.jpg');
                 transform: translate(-20px, -20px);
             }
-        }
-
-        @include tablet-m {
-            // width: 50%;
-            padding: 15%;
-            margin: 5%;
         }
 
         &:hover .about__span-icon {
@@ -195,6 +211,7 @@
     &__footer {
         width: 100%;
         display: flex;
+        // flex-wrap: wrap;
         background-color: $basicBlue;
         margin: 110px auto;
         @include desktop{
@@ -207,33 +224,36 @@
         }
 
         @include mobile-xl {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: start;
+            // flex-basis: 30%;
+            flex-wrap: wrap;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: start;
+            // align-items: start;
+
         }
     }
 
     &__stats {
-        width: 20%;
+        width: 40%;
         height: 270px;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: $basicWhite;
         border-right: 1px solid rgb(216, 216, 216);
+        &--one {
+            border-left: 1px solid rgb(216, 216, 216);
+        }
         @include desktop{
             justify-content: center;
             height: 100%;
         }
 
-        &--one {
-            border-left: 1px solid rgb(216, 216, 216);
-        }
         @include mobile-xl {
+            border: 1px solid rgb(216, 216, 216);
             width: 100%;
-            border-bottom: 1px solid rgb(216, 216, 216);
-
+            flex: 1 1 50%;
         }
     }
 
@@ -252,7 +272,8 @@
         }
 
         @include mobile-xl {
-            // margin: 0 auto;
+            // margin: 8.5% auto 0;
+          
         }
     }
 
@@ -265,8 +286,13 @@
         
         @include desktop {
             padding: 0 10%;
-            font-size: calc(12px + 2 * ((100vw - 360px) / (1920 - 360)));
+            font-size: calc(10px + 4 * ((100vw - 360px) / (1920 - 360)));
             margin-bottom: 28.5%;
         }
+        @include mobile-xl{
+            margin-bottom: 8.5%;
+
+        }
+        
     }
 }

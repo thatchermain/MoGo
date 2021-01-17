@@ -50,22 +50,24 @@
         }
 
         @include tablet {
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+            display: none;
             flex-basis: 70%;
             position: absolute;
             width: 100%;
             left: 0;
-            top: 5vh;
             margin: 0 auto;
-            transform: translateX(-100%);
-            transition: 1s;
+            transform: translateY(-100%);
+            transform: scale(0);
+            transform-origin: top;
+            transition: .4s;
         }
     }
 
-    &__item {
+    // &__item {
 
-    }
+    // }
 
     &__link {
         font-family: 'montserrat';
@@ -107,6 +109,9 @@
             justify-content: center;
             cursor: pointer;
         }
+        @include mobile-xl{
+            padding: 0 20%;
+        }
     }
 
     &__hamburger-line {
@@ -141,10 +146,11 @@
             display: flex;
             top: 5vh;
             flex-direction: column;
+            align-items: center;
             background-color: $basicRed;
-            width: 100vw;
-            transition: 1s;
-            transform: translateX(-10.5%);
+            width: 100%;
+            transition: .4s;
+            transform: scale(1);
 
             .nav__item {
                 padding: 3% 0;
