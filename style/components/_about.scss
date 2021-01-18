@@ -286,7 +286,7 @@
         
         @include desktop {
             padding: 0 10%;
-            font-size: calc(10px + 4 * ((100vw - 360px) / (1920 - 360)));
+            font-size: calc(9px + 5 * ((100vw - 360px) / (1920 - 360)));
             margin-bottom: 28.5%;
         }
         @include mobile-xl{

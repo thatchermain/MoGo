@@ -110,7 +110,8 @@
             cursor: pointer;
         }
         @include mobile-xl{
-            padding: 0 20%;
+            // padding: 0 20%;
+            padding-right:9%;
         }
     }
 
@@ -119,6 +120,7 @@
         background-color: $basicWhite;
         height: 3px;
         width: 40px;
+        margin-right: 5%;
 
         &::after,
         &::before {
@@ -171,43 +173,43 @@
 
 .center {
 
-        &__text {
-            
-            color: $basicWhite;
-            
-            &--small {
-            font-family: 'kaushan';
-            font-weight: normal;
-            font-size: 72px;
-            text-align: center;
-            // padding: 10.9% 0 0 ;
-            padding: 210px 0 0 ;
-            // margin: 10.9% auto 0 ;
-            @include desktop{
-                font-size: calc(36px + 36 * ((100vw - 360px) / (1200 - 360)));
-                // padding: 17.5% 0 0 ;
-            }
+    &__text {
+        
+        color: $basicWhite;
+        
+        &--small {
+        font-family: 'kaushan';
+        font-weight: normal;
+        font-size: 72px;
+        text-align: center;
+        // padding: 10.9% 0 0 ;
+        padding: 210px 0 0 ;
+        // margin: 10.9% auto 0 ;
+        @include desktop{
+            font-size: calc(36px + 36 * ((100vw - 360px) / (1200 - 360)));
+            // padding: 17.5% 0 0 ;
         }
+    }
 
-        &--big {
-            font-family: 'montserrat bold';
-            font-size: 150px;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: 80%;
-            @include desktop{
-                font-size: calc(56px + 94 * ((100vw - 360px) / (1200 - 360)));
-            }
+    &--big {
+        font-family: 'montserrat bold';
+        font-size: 150px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 80%;
+        @include desktop{
+            font-size: calc(56px + 94 * ((100vw - 360px) / (1200 - 360)));
         }
+    }
 
-        &--big-top {
-            margin: 2.05% auto 0;
-            margin: 38px auto 0;
-        }
+    &--big-top {
+        margin: 2.05% auto 0;
+        margin: 38px auto 0;
+    }
 
-        &--big-bottom {
-            margin: 1.05% auto 0;
-            margin: 20px auto 0;
+    &--big-bottom {
+        margin: 1.05% auto 0;
+        margin: 20px auto 0;
         }
 
     }
@@ -235,7 +237,9 @@
         // margin: 2.6% auto 2.6%;
         margin: 50px auto 50px;
     }
-
+    @include mobile-xl{
+        padding-bottom: 10%;
+    }
 }
 
 .progress {
@@ -265,6 +269,10 @@
         font-size: 13px;
         text-transform: uppercase;
         padding: 23px 10px 0 0;
+    }
+
+    @include mobile-xl{
+        display: none;
     }
 
 }

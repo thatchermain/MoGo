@@ -58,12 +58,13 @@ body {
 @media (max-width: 1200px) {
   .container {
     width: 100%;
-    padding: 0 5%;
+    padding: 0 2%;
   }
 }
 
 .title {
   width: 100%;
+  padding: 5%;
 }
 
 .title__top {
@@ -242,7 +243,7 @@ body {
 
 @media (max-width: 600px) {
   .nav__hamburger {
-    padding: 0 20%;
+    padding-right: 9%;
   }
 }
 
@@ -251,6 +252,7 @@ body {
   background-color: white;
   height: 3px;
   width: 40px;
+  margin-right: 5%;
 }
 
 .nav__hamburger-line::after, .nav__hamburger-line::before {
@@ -373,6 +375,12 @@ body {
   margin: 50px auto 50px;
 }
 
+@media (max-width: 600px) {
+  .center {
+    padding-bottom: 10%;
+  }
+}
+
 .progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,6 +412,12 @@ body {
   font-size: 13px;
   text-transform: uppercase;
   padding: 23px 10px 0 0;
+}
+
+@media (max-width: 600px) {
+  .progress {
+    display: none;
+  }
 }
 
 .title {
@@ -776,7 +790,7 @@ body {
 @media (max-width: 1200px) {
   .about__what-of {
     padding: 0 10%;
-    font-size: calc(10px + 4 * ((100vw - 360px) / (1920 - 360)));
+    font-size: calc(9px + 5 * ((100vw - 360px) / (1920 - 360)));
     margin-bottom: 28.5%;
   }
 }
