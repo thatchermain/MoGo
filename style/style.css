@@ -61,7 +61,6 @@ body {
 
 .title {
   width: 100%;
-  padding: 5%;
 }
 
 .title__top {
@@ -434,6 +433,7 @@ body {
 
 .title {
   width: 100%;
+  padding-top: 20px;
 }
 
 .title__top {
@@ -475,236 +475,80 @@ body {
   margin: 34px auto;
 }
 
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.main {
   margin: 0 auto;
 }
 
-.about__text {
+.main__text {
   font-family: 'roboto';
   font-size: 15px;
   line-height: 24px;
   text-align: center;
-  margin: 5px auto;
+  margin: 5px auto 96px;
   padding: 0 5%;
   color: #999999;
 }
 
 @media (max-width: 1200px) {
-  .about__text {
-    margin: 0.6% auto;
+  .main__text {
+    margin: 0.6% auto 7%;
   }
 }
 
-@media (max-width: 720px) {
-  .about__text {
-    margin: 2.6% auto 10%;
-  }
-}
-
-.about__gallery {
+.gallery {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 1vw;
-  min-height: 250px;
-  width: 100%;
-  margin: 100px auto 0;
-}
-
-@media (max-width: 1200px) {
-  .about__gallery {
-    margin: 5% auto;
-  }
+  gap: 30px;
 }
 
 @media (max-width: 720px) {
-  .about__gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .gallery {
+    padding: 0 5%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 14%;
   }
 }
 
-.about__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  width: 360px;
-  height: 250px;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
-  cursor: pointer;
+.gallery__box {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.about__image:hover {
+.gallery__box:hover {
+  -webkit-transform: translate(-10px, -10px);
+          transform: translate(-10px, -10px);
   -webkit-box-shadow: 10px 10px 1px #95e1d3;
           box-shadow: 10px 10px 1px #95e1d3;
 }
 
-@media (max-width: 1200px) {
-  .about__image {
-    width: 30%;
-    hight: 100%;
-    margin: 0;
-  }
-}
-
-@media (max-width: 970px) {
-  .about__image {
-    padding: 10%;
-  }
-}
-
-@media (max-width: 720px) {
-  .about__image {
-    width: 100%;
-    margin: 0;
-    padding: 30%;
-  }
-}
-
-.about__image--one {
-  background: url("../assets/images/about/keyboardS.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-@media (max-width: 1200px) {
-  .about__image--one {
-    background-size: contain;
-  }
-}
-
-@media (max-width: 720px) {
-  .about__image--one {
-    background-size: cover;
-  }
-}
-
-.about__image--one:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/about/keyboardS.jpg");
-  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/about/keyboardS.jpg");
-  -webkit-transform: translate(-20px, -20px);
-          transform: translate(-20px, -20px);
-}
-
-.about__image--two {
-  background: url("../assets/images/about/headphones.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-@media (max-width: 1200px) {
-  .about__image--two {
-    background-size: contain;
-  }
-}
-
-@media (max-width: 720px) {
-  .about__image--two {
-    background-size: cover;
-  }
-}
-
-.about__image--two:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/about/headphones.jpg");
-  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/about/headphones.jpg");
-  -webkit-transform: translate(-20px, -20px);
-          transform: translate(-20px, -20px);
-}
-
-.about__image--three {
-  background: url("../assets/images/about/pot.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-@media (max-width: 1200px) {
-  .about__image--three {
-    background-size: contain;
-  }
-}
-
-@media (max-width: 720px) {
-  .about__image--three {
-    background-size: cover;
-  }
-}
-
-.about__image--three:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/about/pot.jpg");
-  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/about/pot.jpg");
-  -webkit-transform: translate(-20px, -20px);
-          transform: translate(-20px, -20px);
-}
-
-.about__image:hover .about__span-icon {
-  z-index: 1;
+.gallery__box:hover .gallery__overlay {
   opacity: 1;
 }
 
-.about__image:hover .about__span-text {
-  z-index: 1;
-  opacity: 1;
-}
-
-.about__image:hover::after {
-  -webkit-transform: translate(-10px, -10px);
-          transform: translate(-10px, -10px);
-  opacity: 1;
-}
-
-.about__span-icon {
+.gallery__overlay {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))) no-repeat center center;
+  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)) no-repeat center center;
+  background-size: contain;
   opacity: 0;
-  color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 10%;
-  width: 10%;
-  inset: 50% 0 0 50%;
-  -webkit-transform: translate(-50%, -200%);
-          transform: translate(-50%, -200%);
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
-.about__span-icon--one {
-  background-image: url("../assets/images/about/users.png");
+.gallery__bg {
+  width: 100%;
 }
 
-.about__span-text {
-  position: absolute;
-  color: white;
-  font-family: 'montserrat bold';
-  font-size: calc(10px + 8 * ((100vw - 360px) / (1920 - 360)));
-  text-transform: uppercase;
-  display: block;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
-}
-
-.about__footer {
+.footer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -714,25 +558,25 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .about__footer {
+  .footer {
     margin: 3.8% auto;
   }
 }
 
 @media (max-width: 720px) {
-  .about__footer {
+  .footer {
     margin: 10.8% auto;
   }
 }
 
 @media (max-width: 600px) {
-  .about__footer {
+  .footer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
-.about__stats {
+.footer__stats {
   width: 40%;
   height: 270px;
   display: -webkit-box;
@@ -749,12 +593,12 @@ body {
   border-right: 1px solid #d8d8d8;
 }
 
-.about__stats--one {
+.footer__stats--one {
   border-left: 1px solid #d8d8d8;
 }
 
 @media (max-width: 1200px) {
-  .about__stats {
+  .footer__stats {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -763,7 +607,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .about__stats {
+  .footer__stats {
     border: 1px solid #d8d8d8;
     width: 100%;
     -webkit-box-flex: 1;
@@ -772,7 +616,7 @@ body {
   }
 }
 
-.about__number {
+.footer__number {
   display: block;
   font-family: 'montserrat bold';
   margin: 28.5% auto 0;
@@ -780,18 +624,18 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .about__number {
+  .footer__number {
     font-size: calc(16px + 56 * ((100vw - 360px) / (1920 - 360)));
   }
 }
 
 @media (max-width: 970px) {
-  .about__number {
+  .footer__number {
     margin: 8.5% auto 0;
   }
 }
 
-.about__what-of {
+.footer__what-of {
   font-family: 'montserrat';
   font-size: 14px;
   text-transform: uppercase;
@@ -800,7 +644,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .about__what-of {
+  .footer__what-of {
     padding: 0 10%;
     font-size: calc(9px + 5 * ((100vw - 360px) / (1920 - 360)));
     margin-bottom: 28.5%;
@@ -808,7 +652,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .about__what-of {
+  .footer__what-of {
     margin-bottom: 8.5%;
   }
 }

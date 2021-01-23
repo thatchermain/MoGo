@@ -1,5 +1,6 @@
 .title {
     width: 100%;
+    padding-top: 20px;
 
     &__top {
         display: block;
@@ -8,7 +9,8 @@
         text-align: center;
         color: rgb(51, 51, 51);
         margin: 85px auto 0;
-        @include desktop{
+
+        @include desktop {
             margin: 4.50% auto 0;
 
         }
@@ -22,7 +24,8 @@
         text-align: center;
         color: rgb(51, 51, 51);
         margin: 8px auto 0;
-        @include desktop{
+
+        @include desktop {
             margin: 0.45% auto 0;
 
         }
@@ -42,9 +45,9 @@
 }
 
 
-.about {
-    display: flex;
-    flex-direction: column;
+.main {
+    // display: flex;
+    // flex-direction: column;
     margin: 0 auto;
 
     &__text {
@@ -52,187 +55,93 @@
         font-size: 15px;
         line-height: 24px;
         text-align: center;
-        margin: 5px auto;
+        margin: 5px auto 96px;
         padding: 0 5%;
         color: $textLight;
-        @include desktop{
-            margin: 0.6% auto;
 
-        }
-        @include tablet {
-            margin: 2.6% auto 10%;
-
-        }
-    }
-
-    &__gallery {
-        display: flex;
-        justify-content: space-between;
-        gap: 1vw;
-        min-height: 250px;
-        width: 100%;
-        margin: 100px auto 0;
-        
         @include desktop {
-            margin: 5% auto ;
+            margin: 0.6% auto 7%;
 
         }
-        
-        @include tablet {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
 
-        }
+        // @include tablet {
+        //     margin: 2.6% auto 10%;
+
+        // }
     }
-    
-    &__image {
-        flex: 1 1 100%;
-        width: 360px;
-        height: 250px;
-        transition: .3s ease-out;
-        cursor: pointer;
-        &:hover{
+}
+
+// gallery
+.gallery {
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    @include tablet {
+        padding: 0 5%;
+        flex-wrap: wrap;
+        margin-top: 14%;
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        max-width: 380px;
+        margin: auto;
+        transition: all .4s ease-in-out;
+        
+        &:hover {
+            transform: translate(-10px, -10px);
             box-shadow: 10px 10px 1px $basicBlue;
         }
-        @include desktop{
-            width: 30%;
-            hight: 100%;
-            margin:0;
-        }
-        @include tablet-m {
-            padding: 10%;
-        }
-        @include tablet{
-            width: 100%;
-            margin: 0;
-            padding: 30%;
-        }
-     
-        &--one {
-            background: url('../assets/images/about/keyboardS.jpg') no-repeat center center;
-            background-size: cover;
-            @include desktop{
-                background-size: contain;
-            }
-            @include tablet{
-                background-size: cover;
-            }
-            &:hover {
-                background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/keyboardS.jpg');
-                transform: translate(-20px, -20px);
-               
-            }
-        }
-
-        &--two {
-            background: url('../assets/images/about/headphones.jpg') no-repeat center center;
-            background-size: cover;
-            @include desktop{
-                background-size: contain;
-            }
-            @include tablet{
-                background-size: cover;
-            }
-
-            &:hover {
-                background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/headphones.jpg');
-                transform: translate(-20px, -20px);
-            }
-        }
-
-        &--three {
-            background: url('../assets/images/about/pot.jpg') no-repeat center center;
-            background-size: cover;
-            @include desktop{
-                background-size: contain;
-            }
-            @include tablet{
-                background-size: cover;
-            
-            }
-
-            &:hover {
-                background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)), url('../assets/images/about/pot.jpg');
-                transform: translate(-20px, -20px);
-            }
-        }
-
-        &:hover .about__span-icon {
-            z-index: 1;
-            opacity: 1;
-        }
-
-        &:hover .about__span-text {
-            z-index: 1;
-            opacity: 1;
-        }
-
-        &:hover::after {
-            transform: translate(-10px, -10px);
+        
+        &:hover .gallery__overlay {
             opacity: 1;
         }
     }
 
-    &__span-icon {
+    &__overlay {
         position: absolute;
-        opacity: 0;
-        color: $basicWhite;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        height: 10%;
-        width: 10%;
-        inset: 50% 0 0 50%;
-        transform: translate(-50%, -200%);
-        transition: .3s ease-out;
-
-        &--one {
-            background-image: url('../assets/images/about/users.png');
-
-        }
-    }
-
-    &__span-text {
-        position: absolute;
-        color: $basicWhite;
-        font-family: 'montserrat bold';
-        font-size: calc(10px + 8 * ((100vw - 360px) / (1920 - 360)));
-        text-transform: uppercase;
-        display: block;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: .3s ease-out;
-    }
-
-
-    &__footer {
         width: 100%;
-        display: flex;
-        // flex-wrap: wrap;
-        background-color: $basicBlue;
-        margin: 110px auto;
-        @include desktop{
-            margin: 3.8% auto;
-
-        }
-
-        @include tablet {
-            margin: 10.8% auto;
-        }
-
-        @include mobile-xl {
-            // flex-basis: 30%;
-            flex-wrap: wrap;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: start;
-            // align-items: start;
-
-        }
+        height: 100%;
+        background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9)) no-repeat center center;
+        background-size: contain;
+        opacity: 0;
+        transition: .4s ease-in-out;
     }
+
+    &__bg {
+        width: 100%;
+    }
+}
+
+// footer 
+
+.footer {
+    width: 100%;
+    display: flex;
+    // flex-wrap: wrap;
+    background-color: $basicBlue;
+    margin: 110px auto;
+
+    @include desktop {
+        margin: 3.8% auto;
+
+    }
+
+    @include tablet {
+        margin: 10.8% auto;
+    }
+
+    @include mobile-xl {
+        // flex-basis: 30%;
+        flex-wrap: wrap;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: start;
+        // align-items: start;
+
+    }
+
 
     &__stats {
         width: 40%;
@@ -242,10 +151,12 @@
         align-items: center;
         color: $basicWhite;
         border-right: 1px solid rgb(216, 216, 216);
+
         &--one {
             border-left: 1px solid rgb(216, 216, 216);
         }
-        @include desktop{
+
+        @include desktop {
             justify-content: center;
             height: 100%;
         }
@@ -262,6 +173,7 @@
         font-family: 'montserrat bold';
         margin: 28.5% auto 0;
         font-size: 72px;
+
         @include desktop {
             font-size: calc(16px + 56 * ((100vw - 360px) / (1920 - 360)));
             // margin: 18.5% auto 0;
@@ -273,7 +185,7 @@
 
         @include mobile-xl {
             // margin: 8.5% auto 0;
-          
+
         }
     }
 
@@ -283,16 +195,17 @@
         text-transform: uppercase;
         text-align: center;
         margin: 3.5% auto 0;
-        
+
         @include desktop {
             padding: 0 10%;
             font-size: calc(9px + 5 * ((100vw - 360px) / (1920 - 360)));
             margin-bottom: 28.5%;
         }
-        @include mobile-xl{
+
+        @include mobile-xl {
             margin-bottom: 8.5%;
 
         }
-        
+
     }
 }
