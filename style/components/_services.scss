@@ -1,0 +1,70 @@
+.content{
+    // background-color: crimson;
+    margin: 0px auto;
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__wrapper{
+        flex-basis: 30%;
+        display: flex;
+        align-items: start;
+        flex: 1 1 30%;
+        max-width: 400px;
+        min-width: 280px;
+        padding: 0 30px ;
+        &--one, &--two, &--three{
+            padding-bottom: 44px;
+            border-bottom: 1px solid $outline;
+        }
+        &--four, &--five, &--six{
+            padding: 50px 30px;
+        }
+        @include tablet-m{
+            flex: 1 1 40%;
+            &--three{
+                padding: 50px 30px;
+            }
+            &--four{
+                padding-bottom: 64px;
+                border-bottom: 1px solid $outline;
+            }
+        }
+        @include mobile-xl{
+            flex: 1 1 100%;
+            padding: 3% 2%;
+            border-bottom: 1px solid $outline;
+        }
+
+
+
+
+    }
+    &__icon{
+        // background-color: pink;
+        display: flex;
+        flex-basis: 20%;
+    }
+    &__description{
+        // background-color: skyblue;
+        display: flex;
+        flex-basis: 80%;
+        flex-direction: column;
+        &--title{
+            font-family: 'montserrat';
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $textDark;
+        }
+        &--info{
+            font-family: 'roboto';
+            font-size: 15px;
+            color:$textLight;
+            padding: 20px 0 0;
+            @include mobile-xl{
+                padding: 2% 0 0;
+            }
+        }
+    }
+}
