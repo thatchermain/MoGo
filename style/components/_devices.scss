@@ -1,0 +1,42 @@
+.devices{
+    background-image: linear-gradient(rgba($basicWhite, .9), rgba($basicWhite, .9)), url('../assets/images/devices/devices-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    @include tablet{
+        display: none;
+    }
+
+    &__title{
+        margin-top: 3.75%;
+    }
+    &__title-line{
+        margin-bottom: .8%;
+    }
+    &__types{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    &__tablet{
+        position: relative;
+        margin: 28px 30px 0 0;
+        display: block;
+        max-width: 100%;  
+
+    }
+    &__phone{
+        position: absolute;
+        top: 37.3%;
+        left: 57.2%;
+        display: block;
+        max-width: 100%;
+
+    }
+
+}

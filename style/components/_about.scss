@@ -107,6 +107,23 @@
         opacity: 0;
         transition: .4s ease-in-out;
     }
+    &__icon{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__text{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'montserrat bold';
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $basicWhite;
+
+    }
 
     &__bg {
         width: 100%;
