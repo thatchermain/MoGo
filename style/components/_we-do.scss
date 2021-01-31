@@ -1,0 +1,195 @@
+.main {
+
+    // PARAGRAPH
+
+
+    &__text {
+        font-family: 'roboto';
+        font-size: 15px;
+        margin: 3.3% 5.1% 7%;
+    }
+
+
+    // MAIN CONTENT
+
+
+    &__content {
+        display: flex;
+    }
+
+    &__image {
+        @include desktop {
+            display: none;
+        }
+
+        &--bg {
+            width: 100%;
+            max-height: 380px;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 630px;
+        padding: 0 0 0 30px;
+
+        @include desktop {
+            margin: 0 auto;
+            max-width: 630px;
+            width: 80%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        max-height: 58px;
+        border: 1px solid $outline;
+        margin-top: 13px;
+
+        &--one {
+            margin-top: 0;
+        }
+
+    }
+
+    &__icon {
+        padding: 15px;
+    }
+
+    &__service-name {
+        display: flex;
+        flex-basis: 100%;
+        margin: 25px auto;
+        font-family: 'montserrat';
+        font-size: 14px;
+        color: $textDark;
+        text-transform: uppercase;
+    }
+
+    &__arrow {
+        margin: 25px;
+        transform: rotate(180deg);
+    }
+
+    &__service-info {
+        display: flex;
+        justify-content: center;
+        border: 1px solid $outline;
+
+    }
+
+    &__textarea {
+        border: 1px solid $outline;
+        resize: none;
+        border: none;
+        margin: 7px 25px 7px 10px;
+        padding: 7px 25px 7px 10px;
+        font-family: 'roboto italic light';
+        font-size: 15px;
+        line-height: 24px;
+        color: $textLight;
+
+        &--two,
+        &--three {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 50px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 50px;
+            background-color: $basicBlue;
+        }
+    }
+}
+
+// FOOTER
+
+.slider {
+    margin: 120px auto;
+    width: 100%;
+    background-color: $bgLight;
+
+    &__content {
+        padding: 70px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__arrow {
+        &--left {
+            transform: rotate(-90deg);
+            // padding: 0 75px 0 25px;
+        }
+
+        &--right {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__icon {
+        border: 3px solid $basicBlue;
+        width: 145px;
+        height: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+            width: calc(105px + 40 * ((100vw - 360px) / (1200 - 360)));
+            height: calc(105px + 40 * ((100vw - 360px) / (1200 - 360)));
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+    }
+
+    &__info {
+        width: 70%;
+    }
+
+    &__text {
+        align-self: center;
+        font-family: 'roboto italic light';
+        font-size: 24px;
+        line-height: 36px;
+        color: $textLight;
+
+        @include desktop {
+            font-size: calc(14px + 10 * ((100vw - 360px) / (1200 - 360)));
+            line-height: calc(16px + 20 * ((100vw - 360px) / (1200 - 360)));
+        }
+    }
+
+    &__line {
+        background-color: $basicRed;
+        height: 3px;
+        width: 60px;
+        display: inline-block;
+        margin: 0 10px 3px 0;
+    }
+
+    &__signature {
+        position: relative;
+        font-family: 'kaushan';
+        font-size: 24px;
+        margin-top: 10px;
+        color: $textDark;
+        display: inline-block;
+
+    }
+}

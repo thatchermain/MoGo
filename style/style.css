@@ -836,3 +836,219 @@ body {
   display: block;
   max-width: 100%;
 }
+
+.main__text {
+  font-family: 'roboto';
+  font-size: 15px;
+  margin: 3.3% 5.1% 7%;
+}
+
+.main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .main__image {
+    display: none;
+  }
+}
+
+.main__image--bg {
+  width: 100%;
+  max-height: 380px;
+}
+
+.main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 630px;
+  padding: 0 0 0 30px;
+}
+
+@media (max-width: 1200px) {
+  .main__list {
+    margin: 0 auto;
+    max-width: 630px;
+    width: 80%;
+  }
+}
+
+.main__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 58px;
+  border: 1px solid #e5e5e5;
+  margin-top: 13px;
+}
+
+.main__item--one {
+  margin-top: 0;
+}
+
+.main__icon {
+  padding: 15px;
+}
+
+.main__service-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 25px auto;
+  font-family: 'montserrat';
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.main__arrow {
+  margin: 25px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main__service-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #e5e5e5;
+}
+
+.main__textarea {
+  border: 1px solid #e5e5e5;
+  resize: none;
+  border: none;
+  margin: 7px 25px 7px 10px;
+  padding: 7px 25px 7px 10px;
+  font-family: 'roboto italic light';
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.main__textarea--two, .main__textarea--three {
+  display: none;
+}
+
+.main__textarea::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: #F5F5F5;
+}
+
+.main__textarea::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.main__textarea::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #95e1d3;
+}
+
+.slider {
+  margin: 120px auto;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.slider__content {
+  padding: 70px 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider__arrow--left {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.slider__arrow--right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.slider__icon {
+  border: 3px solid #95e1d3;
+  width: 145px;
+  height: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .slider__icon {
+    width: calc(105px + 40 * ((100vw - 360px) / (1200 - 360)));
+    height: calc(105px + 40 * ((100vw - 360px) / (1200 - 360)));
+  }
+}
+
+@media (max-width: 720px) {
+  .slider__icon {
+    display: none;
+  }
+}
+
+.slider__info {
+  width: 70%;
+}
+
+.slider__text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: 'roboto italic light';
+  font-size: 24px;
+  line-height: 36px;
+  color: #999999;
+}
+
+@media (max-width: 1200px) {
+  .slider__text {
+    font-size: calc(14px + 10 * ((100vw - 360px) / (1200 - 360)));
+    line-height: calc(16px + 20 * ((100vw - 360px) / (1200 - 360)));
+  }
+}
+
+.slider__line {
+  background-color: #f38181;
+  height: 3px;
+  width: 60px;
+  display: inline-block;
+  margin: 0 10px 3px 0;
+}
+
+.slider__signature {
+  position: relative;
+  font-family: 'kaushan';
+  font-size: 24px;
+  margin-top: 10px;
+  color: #333333;
+  display: inline-block;
+}
