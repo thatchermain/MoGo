@@ -1,0 +1,75 @@
+.gallery {
+    &__image{
+        margin: 0 auto;
+    }
+
+    &__overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__social-list {
+        list-style: none;
+        display: flex;
+        flex-basis: 60%;
+        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__social-item {
+        background-color: $basicYellow;
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid $basicRed;
+        transition: background-color .4s ease-in-out;
+        &:hover{
+            background-color: $basicRed;
+        }
+    }
+
+    &__social-link img {
+        padding: 15px 15px;
+        transition: .4s ease-in-out;
+        &:hover{
+            filter: brightness(5);
+        }
+    }
+
+    &__person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px 0;
+    }
+
+    &__name {
+        font-family: 'montserrat';
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $textDark;
+    }
+
+    &__position {
+        font-family: 'roboto italic light';
+        font-size: 15px;
+        line-height: 24px;
+        color: $textLight;
+        padding: 6px;
+    }
+}
+
+
+.slider{
+    margin: 84px auto 0;
+    width: 100%;
+    background-color: $bgLight; 
+    @include tablet{
+        margin: 1% auto 0;
+
+    }
+    &__logo{
+        max-width: 100%;
+    }
+}

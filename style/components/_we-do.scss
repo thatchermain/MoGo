@@ -3,7 +3,7 @@
     // PARAGRAPH
 
 
-    &__text {
+    &__we-do-text {
         font-family: 'roboto';
         font-size: 15px;
         margin: 3.3% 5.1% 7%;
@@ -37,8 +37,9 @@
 
         @include desktop {
             margin: 0 auto;
+            padding: 0;
             max-width: 630px;
-            width: 80%;
+            width: 100%;
         }
     }
 
@@ -66,6 +67,10 @@
         font-size: 14px;
         color: $textDark;
         text-transform: uppercase;
+        @include tablet{
+            font-size: calc(12px + 2 * ((100vw - 360px) / (1200 - 360)));
+
+        }
     }
 
     &__arrow {
@@ -116,7 +121,7 @@
 // FOOTER
 
 .slider {
-    margin: 120px auto;
+    margin: 120px auto 0;
     width: 100%;
     background-color: $bgLight;
 

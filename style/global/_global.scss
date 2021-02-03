@@ -15,6 +15,7 @@ body {
 
 }
 .container {
+    margin: 0 auto;
     max-width: 1200px;
     @include desktop {
         width: 100%;
@@ -50,4 +51,9 @@ body {
         height: 3px;
         margin: 1.8% auto 1.5%;
     }
+}
+
+.main__text{
+    margin: 0 auto;
+    max-width: 960px;
 }

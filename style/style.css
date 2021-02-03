@@ -49,6 +49,7 @@ body {
 }
 
 .container {
+  margin: 0 auto;
   max-width: 1200px;
 }
 
@@ -90,9 +91,14 @@ body {
   margin: 1.8% auto 1.5%;
 }
 
+.main__text {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
 .home {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/header.jpg");
-  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/header.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), url("../assets/images/header/header.jpg");
+  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/images/header/header.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -480,17 +486,12 @@ body {
   margin: 34px auto;
 }
 
-.main {
-  margin: 0 auto;
-}
-
 .main__text {
   font-family: 'roboto';
   font-size: 15px;
   line-height: 24px;
   text-align: center;
   margin: 5px auto 96px;
-  padding: 0 5%;
   color: #999999;
 }
 
@@ -521,7 +522,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 380px;
-  margin: auto;
+  margin: 0 auto;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -837,7 +838,7 @@ body {
   max-width: 100%;
 }
 
-.main__text {
+.main__we-do-text {
   font-family: 'roboto';
   font-size: 15px;
   margin: 3.3% 5.1% 7%;
@@ -875,8 +876,9 @@ body {
 @media (max-width: 1200px) {
   .main__list {
     margin: 0 auto;
+    padding: 0;
     max-width: 630px;
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -908,6 +910,12 @@ body {
   font-size: 14px;
   color: #333333;
   text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .main__service-name {
+    font-size: calc(12px + 2 * ((100vw - 360px) / (1200 - 360)));
+  }
 }
 
 .main__arrow {
@@ -958,7 +966,7 @@ body {
 }
 
 .slider {
-  margin: 120px auto;
+  margin: 120px auto 0;
   width: 100%;
   background-color: #f8f8f8;
 }
@@ -1051,4 +1059,106 @@ body {
   margin-top: 10px;
   color: #333333;
   display: inline-block;
+}
+
+.gallery__image {
+  margin: 0 auto;
+}
+
+.gallery__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery__social-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery__social-item {
+  background-color: #fce38a;
+  width: 100%;
+  text-align: center;
+  border-right: 1px solid #f38181;
+  -webkit-transition: background-color .4s ease-in-out;
+  transition: background-color .4s ease-in-out;
+}
+
+.gallery__social-item:hover {
+  background-color: #f38181;
+}
+
+.gallery__social-link img {
+  padding: 15px 15px;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.gallery__social-link img:hover {
+  -webkit-filter: brightness(5);
+          filter: brightness(5);
+}
+
+.gallery__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 0;
+}
+
+.gallery__name {
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.gallery__position {
+  font-family: 'roboto italic light';
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  padding: 6px;
+}
+
+.slider {
+  margin: 84px auto 0;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 720px) {
+  .slider {
+    margin: 1% auto 0;
+  }
+}
+
+.slider__logo {
+  max-width: 100%;
 }
