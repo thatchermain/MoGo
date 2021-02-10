@@ -1453,3 +1453,107 @@ body {
     padding-left: 5%;
   }
 }
+
+.clients {
+  background-image: url("../assets/images/clients/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  max-height: 100%;
+  width: 100%;
+}
+
+.clients__title {
+  margin-top: 3.75%;
+}
+
+.clients__title-line {
+  margin-bottom: .8%;
+}
+
+.client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+.client__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  flex-basis: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 75px;
+  gap: 5%;
+}
+
+@media (max-width: 720px) {
+  .client__box {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.client__photo {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.client__info {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.client__name {
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.client__occupation {
+  font-family: 'roboto italic light';
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 36px;
+  text-transform: capitalize;
+  color: textDark;
+}
+
+.client__line {
+  display: block;
+  background-color: #f38181;
+  width: 60px;
+  height: 3px;
+  margin-bottom: 15px;
+}
+
+.client__comment {
+  font-family: 'roboto';
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+}
