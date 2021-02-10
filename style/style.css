@@ -1201,6 +1201,13 @@ body {
   width: 100%;
 }
 
+.work__box:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
 .work__box:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -1370,13 +1377,6 @@ body {
   max-width: 480px;
   width: 100%;
   height: auto;
-}
-
-.gallery__box:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(0);
-          transform: translate(0);
 }
 
 .slider__work {

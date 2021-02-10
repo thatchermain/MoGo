@@ -21,6 +21,10 @@
         display: grid;
         max-width: fit-content;
         width: 100%;   
+        &:hover{    
+            box-shadow: none;
+            transform: translate(0);
+        }
     }
     &__box:nth-child(1){
         grid-row: 1/2;
@@ -99,16 +103,6 @@
         width: 100%;
         height: auto;
     }
-}
-.gallery{
-
-    &__box{
-        &:hover{    
-            box-shadow: none;
-            transform: translate(0);
-        }
-    }
-    
 }
 
 .slider{
