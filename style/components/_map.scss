@@ -1,0 +1,40 @@
+.map{
+    &__banner{
+        width: 100%;
+        height: 200px;
+        background-image: url('../assets/images/map/map-bg.jpg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__overlay{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }
+    &__hint{
+        font-family: 'montserrat bold';
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $basicRed;
+    }
+    &__line{
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: $basicRed;
+    }
+
+    &__content{
+        display: none;
+        width: 100%;
+        
+    }
+
+
+
+
+}
