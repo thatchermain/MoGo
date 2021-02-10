@@ -1,0 +1,81 @@
+.article{
+    padding-top: 10px;
+    display: flex;
+    gap: 30px;
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__photo{
+        position: relative;
+        max-width: 100%;
+        max-width: 380px;   
+    }
+    &__bg{
+        max-width: 380px;
+        width: 100%;
+    }
+    &__date{
+        position: absolute;
+        transform: translate(-10%, -110%);
+        background-color: $basicBlue;
+        display: flex;
+        flex-direction: column;
+        color: $basicWhite;
+        padding: 10px 15px;
+    }
+    &__day{
+        font-family: 'montserrat bold';
+        font-size: 30px;
+    }
+    &__month{
+        font-family: 'roboto italic light';
+        font-size: 15px;
+    }
+
+    &__info{
+        max-width: 100%;
+        max-width: 380px;
+    }
+    &__title{
+        font-family: 'montserrat';
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $textDark;
+        margin: 15px 0;
+    }
+    &__preview{
+        font-family: 'roboto';
+        font-size: 15px;
+        line-height: 24px;
+        color: $textLight;
+    }
+
+    &__stats{
+        border-top: 1px solid $outline;
+        display: flex;
+        gap: 30px;
+        justify-content: start;
+        align-items: center;
+        margin: 4% 0;
+        padding: 4% 0;
+        max-width: 100%;
+        max-width: 380px;
+        color: $textLight;
+        font-family: 'roboto italic light';
+        font-size: 15px;
+        line-height: 24px;  
+    }
+    &__views{
+
+    }
+    &__comments{
+
+    }
+}

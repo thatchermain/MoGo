@@ -1557,3 +1557,112 @@ body {
   line-height: 24px;
   color: #999999;
 }
+
+.article {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 720px) {
+  .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.article__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.article__photo {
+  position: relative;
+  max-width: 100%;
+  max-width: 380px;
+}
+
+.article__bg {
+  max-width: 380px;
+  width: 100%;
+}
+
+.article__date {
+  position: absolute;
+  -webkit-transform: translate(-10%, -110%);
+          transform: translate(-10%, -110%);
+  background-color: #95e1d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  padding: 10px 15px;
+}
+
+.article__day {
+  font-family: 'montserrat bold';
+  font-size: 30px;
+}
+
+.article__month {
+  font-family: 'roboto italic light';
+  font-size: 15px;
+}
+
+.article__info {
+  max-width: 100%;
+  max-width: 380px;
+}
+
+.article__title {
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 15px 0;
+}
+
+.article__preview {
+  font-family: 'roboto';
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.article__stats {
+  border-top: 1px solid #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4% 0;
+  padding: 4% 0;
+  max-width: 100%;
+  max-width: 380px;
+  color: #999999;
+  font-family: 'roboto italic light';
+  font-size: 15px;
+  line-height: 24px;
+}
