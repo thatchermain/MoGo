@@ -103,6 +103,31 @@
         width: 100%;
         height: auto;
     }
+
+
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__text{
+        color: $basicWhite;
+        &--title{
+            font-family: 'montserrat';
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        &--description{
+            font-family: 'roboto italic light';
+            font-size: 15px;
+        }
+    }
+
+
 }
 
 .slider{

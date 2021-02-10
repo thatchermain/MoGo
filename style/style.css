@@ -1379,6 +1379,39 @@ body {
   height: auto;
 }
 
+.work__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.work__text {
+  color: white;
+}
+
+.work__text--title {
+  font-family: 'montserrat';
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.work__text--description {
+  font-family: 'roboto italic light';
+  font-size: 15px;
+}
+
 .slider__work {
   margin-top: 60px;
 }
