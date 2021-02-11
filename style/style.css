@@ -528,6 +528,7 @@ body {
 }
 
 .gallery__box:hover {
+  cursor: pointer;
   -webkit-transform: translate(-10px, -10px);
           transform: translate(-10px, -10px);
   -webkit-box-shadow: 10px 10px 1px #95e1d3;
@@ -895,6 +896,10 @@ body {
   margin-top: 0;
 }
 
+.main__item:hover {
+  cursor: pointer;
+}
+
 .main__icon {
   padding: 15px;
 }
@@ -990,9 +995,17 @@ body {
           transform: rotate(-90deg);
 }
 
+.slider__arrow--left:hover {
+  cursor: pointer;
+}
+
 .slider__arrow--right {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.slider__arrow--right:hover {
+  cursor: pointer;
 }
 
 .slider__icon {
@@ -1680,6 +1693,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.map__banner:hover {
+  cursor: pointer;
 }
 
 .map__overlay {

@@ -89,6 +89,7 @@
         transition: all .4s ease-in-out;
         
         &:hover {
+            cursor: pointer;
             transform: translate(-10px, -10px);
             box-shadow: 10px 10px 1px $basicBlue;
         }
@@ -135,7 +136,6 @@
 .results {
     width: 100%;
     display: flex;
-    // flex-wrap: wrap;
     background-color: $basicBlue;
     margin: 110px auto 0;
 
@@ -149,12 +149,7 @@
     }
 
     @include mobile-xl {
-        // flex-basis: 30%;
         flex-wrap: wrap;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: start;
-        // align-items: start;
 
     }
 
