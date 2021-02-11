@@ -1717,3 +1717,320 @@ body {
   display: none;
   width: 100%;
 }
+
+.footer {
+  background-color: #f8f8f8;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.info {
+  color: #999999;
+  margin: 62px 0;
+  max-width: 480px;
+}
+
+.info__title {
+  font-family: 'montserrat bold';
+  font-size: 46px;
+  color: #cccccc;
+}
+
+.info__text {
+  font-family: 'roboto';
+  font-size: 15px;
+  line-height: 24px;
+  padding: 25px 0 42px;
+}
+
+.info__number {
+  font-family: 'montserrat bold';
+  font-size: 18px;
+  color: #333333;
+}
+
+.info__what-of {
+  font-family: 'montserrat';
+  font-size: 15px;
+  color: #333333;
+}
+
+.info__follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid #e5e5e5;
+  margin: 16px 0 20px;
+  padding: 16px 0;
+}
+
+.info__span {
+  font-family: 'roboto italic light';
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.info__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .info__list {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
+.info__input {
+  font-family: 'roboto italic light';
+  font-size: 15px;
+  width: 230px;
+  height: 40px;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.info__input::-webkit-input-placeholder {
+  color: #e5e5e5;
+}
+
+.info__input:-ms-input-placeholder {
+  color: #e5e5e5;
+}
+
+.info__input::-ms-input-placeholder {
+  color: #e5e5e5;
+}
+
+.info__input::placeholder {
+  color: #e5e5e5;
+}
+
+.info__btn {
+  font-family: 'montserrat bold';
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  border: 1px solid #95e1d3;
+}
+
+.blogs {
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 360px;
+}
+
+.blogs__title {
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 76px 0 37px;
+}
+
+.blogs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 28px;
+}
+
+.blogs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.blogs__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2% 6%;
+}
+
+.blogs__description {
+  font-family: 'montserrat';
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.blogs__date {
+  font-family: 'roboto italic light';
+  font-size: 13px;
+  color: #999999;
+}
+
+.insta {
+  max-width: 360px;
+}
+
+.insta__title {
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 76px 0 37px;
+}
+
+.insta__gallery {
+  display: -ms-grid;
+  display: grid;
+  gap: 2px;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3 1fr);
+}
+
+.insta__image {
+  display: -ms-grid;
+  display: grid;
+}
+
+.insta__image:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.insta__image:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.insta__image:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.insta__image:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.insta__image:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.insta__image:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.insta__image:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.insta__image:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.insta__image:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.insta__more {
+  font-family: 'roboto italic light';
+  font-size: 13px;
+  margin: 17px 0;
+}
