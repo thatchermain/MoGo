@@ -14,7 +14,8 @@
     top: 0;
     width: 100%;
     z-index: 999;
-    &__navbar{
+
+    &__navbar {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -22,10 +23,12 @@
         text-align: center;
         padding: 1% 0;
         margin: 0 auto;
-        @include desktop-xl{ 
+
+        @include desktop-xl {
             padding: 1% 1%;
         }
-        @include tablet{
+
+        @include tablet {
             padding: 1% 5%;
 
         }
@@ -34,11 +37,13 @@
     &__logo {
         font-family: 'montserrat bold';
         font-size: 30px;
+
         // padding: 0 .5%;
-        &--link{
+        &--link {
             text-decoration: none;
             color: $basicWhite;
         }
+
         &:hover {
             cursor: pointer;
         }
@@ -51,23 +56,25 @@
         align-items: flex-end;
         list-style: none;
         margin: 1% 0 0;
+
         // padding: 0 1%;
-        @include desktop{
+        @include desktop {
             flex-basis: 65%;
         }
 
         @include tablet {
-            // display: flex;
-            flex-direction: column;
-            // display: none;
-            flex-basis: 70%;
-            position: absolute;
-            width: 100%;
-            left: 0;
-            margin: 0 auto;
-            transform: translateY(-100%);
-            // transform: scale(0);
-            transform-origin: left;
+            display: none;
+        //     // display: flex;
+        //     flex-direction: column;
+        //     // display: none;
+        //     flex-basis: 70%;
+        //     position: absolute;
+        //     width: 100%;
+        //     left: 0;
+        //     margin: 0 auto;
+        //     transform: translateY(-100%);
+        //     // transform: scale(0);
+        //     transform-origin: left;
             transition: .4s;
         }
     }
@@ -116,9 +123,10 @@
             justify-content: center;
             cursor: pointer;
         }
-        @include mobile-xl{
+
+        @include mobile-xl {
             // padding: 0 20%;
-            padding-right:9%;
+            padding-right: 9%;
         }
     }
 
@@ -147,28 +155,23 @@
         }
     }
 
-    &__mobile-input {
-        display: none;
-
-        &:checked~.nav__list {
+    &__mobile {
+        @include tablet{
             position: absolute;
             display: flex;
-            // top: 5vh;
-            top: 100%;
+            top: 85%;
+            left: 0;
             flex-direction: column;
             align-items: center;
-            background-color: $basicRed;
+            background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9));
             width: 100%;
-            transition: .4s;
-            transform: scale(1);
-            transform-origin: right;
-
+            
             .nav__item {
                 padding: 3% 0;
-
+                
                 &--link {
                     font-size: 18px;
-
+                    
                     &::after {
                         top: -20px;
                         ;
@@ -176,51 +179,65 @@
                 }
             }
         }
+            &--off{
+                transform: translateX(100%);
+                transition: .4s;
+            }
+            &--on{
+                transform: translateX(0);
+                transition: .4s;
+            }
+
     }
+    
+
 
 }
 
 .center {
 
     &__text {
-        
+
         color: $basicWhite;
-        
+
         &--small {
-        font-family: 'kaushan';
-        font-weight: normal;
-        font-size: 72px;
-        text-align: center;
-        // padding: 10.9% 0 0 ;
-        padding: 210px 0 0 ;
-        // margin: 10.9% auto 0 ;
-        @include desktop{
-            font-size: calc(36px + 36 * ((100vw - 360px) / (1200 - 360)));
-        }
-        @include tablet{
-            padding: 27.5% 0 0 ;
-        }
-    }
+            font-family: 'kaushan';
+            font-weight: normal;
+            font-size: 72px;
+            text-align: center;
+            // padding: 10.9% 0 0 ;
+            padding: 210px 0 0;
 
-    &--big {
-        font-family: 'montserrat bold';
-        font-size: 150px;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 80%;
-        @include desktop{
-            font-size: calc(56px + 94 * ((100vw - 360px) / (1200 - 360)));
+            // margin: 10.9% auto 0 ;
+            @include desktop {
+                font-size: calc(36px + 36 * ((100vw - 360px) / (1200 - 360)));
+            }
+
+            @include tablet {
+                padding: 27.5% 0 0;
+            }
         }
-    }
 
-    &--big-top {
-        margin: 2.05% auto 0;
-        margin: 38px auto 0;
-    }
+        &--big {
+            font-family: 'montserrat bold';
+            font-size: 150px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 80%;
 
-    &--big-bottom {
-        margin: 1.05% auto 0;
-        margin: 20px auto 0;
+            @include desktop {
+                font-size: calc(56px + 94 * ((100vw - 360px) / (1200 - 360)));
+            }
+        }
+
+        &--big-top {
+            margin: 2.05% auto 0;
+            margin: 38px auto 0;
+        }
+
+        &--big-bottom {
+            margin: 1.05% auto 0;
+            margin: 20px auto 0;
         }
 
     }
@@ -248,7 +265,8 @@
         // margin: 2.6% auto 2.6%;
         margin: 50px auto 50px;
     }
-    @include tablet{
+
+    @include tablet {
         padding-bottom: 10%;
     }
 }
@@ -262,7 +280,7 @@
         margin: 100px 1.7% 30px 0;
         display: flex;
         border-top: 3px solid $basicWhite;
-        width: 100%;    
+        width: 100%;
     }
 
     &__span {
@@ -282,7 +300,7 @@
         padding: 23px 10px 0 0;
     }
 
-    @include tablet{
+    @include tablet {
         display: none;
     }
 
