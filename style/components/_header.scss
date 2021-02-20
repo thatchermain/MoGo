@@ -149,11 +149,10 @@
             list-style: none;
             background: linear-gradient(rgba($basicRed, .9), rgba($basicYellow, .9));
             width: 100%;
-            animation: showMenu .4s;
+            
             
             .nav__item {
-                padding: 3% 0;
-                
+                padding: 3% 0;         
                 &--link {
                     font-size: 18px;
                     &::after {
@@ -163,14 +162,7 @@
                 }
             }
         }
-            // &--off{
-            //     transform: translateX(100%);
-            //     transition: .4s;
-            // }
-            // &--on{
-            //     transform: translateX(0);
-            //     transition: .4s;
-            // }
+
 
     }
     
@@ -236,18 +228,24 @@
     }
 
     &__button {
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 160px;
         height: 40px;
         background: none;
         border: 3px solid #fff;
-        font-family: 'montserrat bold';
-        font-size: 14px;
-        font-weight: bold;
-        text-transform: uppercase;
         cursor: pointer;
         // margin: 2.6% auto 2.6%;
         margin: 50px auto 50px;
+        &--link{
+            font-family: 'montserrat bold';
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $basicWhite;
+            text-decoration: none;
+        padding: 5% 15%;
+        }
     }
 
     @include tablet {
@@ -301,12 +299,11 @@
 
 @keyframes showLinks {
     0%{
-        transform: translateX(1000%);
-        opacity: 0;
-        visibility: hidden;
+        transform: translateX(100vw);
+
     }
     100%{
-        transform: translateX(0%);
+        transform: translateX(0vw);
         // opacity: 1;
     }
 }
