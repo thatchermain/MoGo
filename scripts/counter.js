@@ -15,10 +15,9 @@ function countUp() {
                 counter.innerText = target;
             }
         }
+        
         updateCount();
     })
 }
-
-countUp();
-
+    countUp();
 export default countUp;
