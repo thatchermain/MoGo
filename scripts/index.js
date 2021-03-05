@@ -113,7 +113,7 @@ titleTops.forEach(titleTop => {
 })
 
 titleMids.forEach(titleMid => {
-    moveFromRight(titleMid);
+    moveFromLeft(titleMid);
 })
 
 titleLines.forEach(titleLine => {
@@ -167,7 +167,6 @@ gsap.from(weDoImg, {
 });
 
 weDoList.forEach(list => {
-    console.log(weDoList)
     moveFromNowhere(list.children, .2)
 })
 
@@ -176,7 +175,7 @@ clients.forEach(client => {
 })
 
 blogs.forEach(blog => {
-    moveFromRight(blog.children, .4)
+    moveFromLeft(blog.children, .4)
 })
 
 gsap.from(map, {
