@@ -19,5 +19,5 @@ function countUp() {
         updateCount();
     })
 }
-    countUp();
+    // countUp();
 export default countUp;

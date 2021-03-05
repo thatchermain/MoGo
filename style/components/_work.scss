@@ -165,4 +165,8 @@
             }
         }
     }
+
+    @include tablet {
+        margin-top: 0px;
+    }
 }

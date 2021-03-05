@@ -151,9 +151,12 @@ body {
   width: 100%;
 }
 
-.nav {
+.nav__bg {
   background: -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a));
   background: linear-gradient(#f38181, #fce38a);
+}
+
+.nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -1016,8 +1019,8 @@ body {
   border: 1px solid #e5e5e5;
   height: 0;
   overflow: hidden;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .main__textarea {
@@ -1030,6 +1033,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: #999999;
+  max-width: 100%;
 }
 
 .main__textarea::-webkit-scrollbar-track {
@@ -1050,8 +1054,8 @@ body {
 .main .active {
   width: 100%;
   height: 170px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .slider {
@@ -1552,6 +1556,12 @@ body {
   }
 }
 
+@media (max-width: 720px) {
+  .slider {
+    margin-top: 0px;
+  }
+}
+
 .clients {
   background-image: url("../assets/images/clients/bg.jpg");
   background-repeat: no-repeat;
@@ -1861,7 +1871,7 @@ body {
 
 .info {
   color: #999999;
-  margin: 62px 0;
+  margin: 62px 0 0;
   max-width: 480px;
 }
 

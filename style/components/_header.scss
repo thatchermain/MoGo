@@ -7,9 +7,12 @@
     max-height: 100%;
     width: 100%;
 }
-
-.nav {
+.nav__bg {
     background: linear-gradient(($basicRed), ($basicYellow));
+}
+.nav {
+    
+    // background: none;
     position: fixed;
     top: 0;
     width: 100%;
