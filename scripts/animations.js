@@ -1,3 +1,6 @@
+import countUp from "./counter.js"
+
+
 
 const moveFromLeft = (trigger, stagger) => {
     gsap.from(trigger, {
@@ -5,6 +8,7 @@ const moveFromLeft = (trigger, stagger) => {
         opacity: 0,
         x: -1000,
         stagger: stagger,
+        onComplete: countUp,
         scrollTrigger: {
             trigger: trigger,
             start: 'top 70%',
@@ -12,11 +16,11 @@ const moveFromLeft = (trigger, stagger) => {
     })
 }
 
-const moveFromRight = (trigger, stagger) => {
+const moveFromInside = (trigger, stagger) => {
     gsap.from(trigger, {
         duration: 1,
-        opacity: 0,
-        x: 1000,
+        scale: 0, 
+        
         stagger: stagger,
         scrollTrigger: {
             trigger: trigger,
@@ -43,9 +47,10 @@ const scale = (trigger, stagger) => {
         scale: 0,
         opacity: 0,
         stagger: stagger,
+        onComplete: countUp,
         scrollTrigger: {
             trigger: trigger,
-            start: 'top 70%',
+            start: 'top bottom',
         },
     })
 }
@@ -65,4 +70,4 @@ const scaleFooter = (trigger, stagger) => {
 
 
 
-export {moveFromLeft, moveFromRight, moveFromNowhere, scale, scaleFooter}
+export {moveFromLeft, moveFromInside, moveFromNowhere, scale, scaleFooter}

@@ -3,7 +3,7 @@ import countUp from './counter.js'
 import mobile from './nav.js'
 import showInfo from './we-do.js'
 import showMap from './map.js'
-import {moveFromLeft, moveFromRight, moveFromNowhere, scale, scaleFooter} from './animations.js'
+import {moveFromLeft, moveFromInside, moveFromNowhere, scale, scaleFooter} from './animations.js'
 
 
         //  DOM ELEMENTS    //
@@ -24,6 +24,7 @@ const blogs = document.querySelectorAll('.blog__article');
 const map = document.querySelector('.map');
 const footer = document.querySelectorAll('.footer__content');
 
+const titles = document.querySelectorAll('.title')
 
 
 window.onscroll = () => {
@@ -108,16 +109,20 @@ gsap.from('.progress__wrapper', {
 
 
 
-titleTops.forEach(titleTop => {
-    moveFromLeft(titleTop);
-})
+// titleTops.forEach(titleTop => {
+//     moveFromInside(titleTop);
+// })
 
-titleMids.forEach(titleMid => {
-    moveFromLeft(titleMid);
-})
+// titleMids.forEach(titleMid => {
+//     moveFromInside(titleMid);
+// })
 
-titleLines.forEach(titleLine => {
-    moveFromNowhere(titleLine);
+// titleLines.forEach(titleLine => {
+//     moveFromNowhere(titleLine);
+// })
+
+titles.forEach(title => {
+    moveFromInside(title.children, .47)
 })
 
 paragraphs.forEach(paragraph => {
@@ -125,12 +130,12 @@ paragraphs.forEach(paragraph => {
 })
 
 galleryBoxes.forEach(box => {
-    moveFromNowhere(box.children, .3);
+    moveFromLeft(box.children, .3);
 })
 
 results.forEach(result => {
-    scale(result, .3,);
-    setTimeout(countUp,3000)
+    scale(result, .3)
+
 })
 
 services.forEach(service => {
@@ -171,7 +176,7 @@ weDoList.forEach(list => {
 })
 
 clients.forEach(client => {
-    scale(client.children, 1)
+    scale(client.children, .4)
 })
 
 blogs.forEach(blog => {

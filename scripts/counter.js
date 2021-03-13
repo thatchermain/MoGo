@@ -16,7 +16,7 @@ function countUp() {
             }
         }
         
-        updateCount();
+        setTimeout(updateCount,1000);
     })
 }
     // countUp();
